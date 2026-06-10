@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Zunairah Hasan</title>
+    <meta
+      name="description"
+      content="Contact Zunairah Hasan — electrical engineering student."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
+    <div id="bootScreen" class="boot-screen" aria-hidden="true">
+      <div class="boot-terminal">
+        <div class="boot-header">ZUN-SYSTEM v2.0 — POST SEQUENCE</div>
+        <div class="boot-output" id="bootOutput"></div>
+        <div class="boot-progress-wrap">
+          <div class="boot-progress-bar" id="bootProgress"></div>
+        </div>
+        <div class="boot-status" id="bootStatus">Initializing...</div>
+      </div>
+    </div>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="index.html" class="logo">
+          <img src="images/name.png" alt="Zunairah Hasan" class="logo-name" />
+        </a>
+        <nav class="nav">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html" class="active-link">Contact</a>
+        </nav>
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </header>
+    <main>
+      <section class="contact section" id="contact">
+        <div class="container section-shell">
+          <div class="contact-page-header">
+            <h1>Let's connect!</h1>
+            <p class="contact-subtext">
+              Open to connecting about coursework, projects, and engineering
+              opportunities.
+            </p>
+          </div>
+          <div class="contact-page-grid">
+            <div class="contact-card">
+              <div class="contact-links">
+                <a href="mailto:hasan.zbh@gmail.com">Email</a>
+                <a
+                  href="https://www.linkedin.com/in/zunairahhasan/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >LinkedIn</a
+                >
+                <a
+                  href="https://github.com/hasanz007"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >GitHub</a
+                >
+                <a href="resume.pdf" target="_blank" rel="noopener noreferrer"
+                  >Resume</a
+                >
+              </div>
+            </div>
+            <form
+              class="contact-form"
+              id="contactForm"
+              action="mailto:hasan.zbh@gmail.com"
+              method="post"
+              enctype="text/plain"
+            >
+              <div class="form-row">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                  required
+                  class="form-input"
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  required
+                  class="form-input"
+                />
+              </div>
+              <textarea
+                name="message"
+                placeholder="Message"
+                required
+                class="form-textarea"
+                rows="4"
+              ></textarea>
+              <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>&copy; <span id="year"></span> Zunairah Hasan</p>
+        <p>Built with HTML, CSS, and JavaScript</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

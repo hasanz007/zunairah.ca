@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3EY4 | Electrical Systems Integration Project</title>
+    <meta
+      name="description"
+      content="Electrical Systems Integration Project portfolio page for ELECENG 3EY4 featuring ROS, Linux, motor control, localization, mapping, and autonomous driving."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"
+    />
+    `n
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    `n
+<style>
+  .project-hero h1 {
+    background: linear-gradient(135deg, #ffa502, #cc8400);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .project-kicker { color: #ffa502; }
+  .project-kicker::before { background: #ffa502; }
+  .project-meta span { border-color: rgba(255,165,2,0.25); }
+  .section-label { color: #ffa502; }
+  .back-link { color: #ffa502; }
+  .overview-card h3 { color: #ffa502; }
+  .case-card h2, .outcome-banner h2 {
+    background: linear-gradient(135deg, #ffa502, #cc8400);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .project-kicker { color: #000000; }
+  .section-label { color: #000000; }
+  .tools-cloud span { color: #ffa502; border-color: rgba(255,165,2,0.18); }
+  .tools-cloud span:hover { border-color: rgba(255,165,2,0.40); background: rgba(255,165,2,0.06); }
+  .tools-cloud span.active { background: rgba(255,165,2,0.15); border-color: rgba(255,165,2,0.55); box-shadow: 0 0 16px rgba(255,165,2,0.12); color: #2d2942; }
+  .timeline-item { border-left-color: rgba(255,165,2,0.35); }
+  .code-dot { background: rgba(255,165,2,0.2); }
+  .code-dot.active { background: #ffa502; }
+  .code-slide { border-color: rgba(255,165,2,0.12); }
+  .outcome-banner { border-color: rgba(255,165,2,0.18); }
+  .highlight-box { border-color: rgba(255,165,2,0.16); }
+  .project-cover-placeholder {
+    background:
+      linear-gradient(135deg, rgba(255,255,255,0.7), rgba(255,165,2,0.10)),
+      radial-gradient(circle at top right, rgba(255,165,2,0.20), transparent 35%),
+      radial-gradient(circle at bottom left, rgba(255,165,2,0.12), transparent 35%);
+  }
+</style>
+  </head>
+  <body class="project-page">
+    <div class="ambient-voltage" id="ambientVoltage"></div>
+    <div class="lightbox" id="lightbox">
+      <span class="lightbox-close" id="lightboxClose">×</span>
+      <img
+        class="lightbox-content"
+        id="lightboxImg"
+        alt="Expanded project image"
+      />
+    </div>
+    <div class="easter-eggs" aria-hidden="true">
+      <span class="ee-schematic ee-resistor"></span>
+      <span class="ee-schematic ee-capacitor"></span>
+      <span class="ee-schematic ee-wave"></span>
+      <span class="ee-schematic ee-chip"></span>
+      <span class="ee-schematic ee-inductor"></span>
+      <span class="ee-schematic ee-diode"></span>
+      <span class="ee-schematic ee-opamp"></span>
+      <span class="ee-text ee-binary-1">ROS • LiDAR • VESC</span>
+      <span class="ee-text ee-binary-2">AEV • Mapping • Control</span>
+      <span class="ee-text ee-data-1">10101101</span>
+      <span class="ee-text ee-data-2">CLK • DATA • GND</span>
+      <span class="ee-text ee-data-3">R = 220Ω</span>
+      <span class="ee-spark ee-spark-1"></span>
+      <span class="ee-spark ee-spark-2"></span>
+      <span class="ee-spark ee-spark-3"></span>
+    </div>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="index.html#home" class="logo">
+          <img src="images/name.png" alt="Zunairah Hasan" class="logo-name" />
+        </a>
+<nav class="nav">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="projects.html" class="active-link">Projects</a>
+  <a href="contact.html">Contact</a>
+</nav>
+<button class="menu-btn" id="menuBtn" aria-label="Open menu">
+  <span></span><span></span><span></span>
+</button>
+</div>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="projects.html">Projects</a>
+  <a href="contact.html">Contact</a>
+</div>
+    </header>
+    <main>
+      <section class="project-hero" id="home">
+        <div class="container">
+          <a class="back-link" href="projects.html">← Back to Projects</a>
+          <div class="project-hero-grid">
+            <div>
+              <p class="project-kicker">ELECENG 3EY4</p>
+              <h1>Electrical Systems Integration Project</h1>
+              <p>
+                A systems-level engineering project focused on the McMaster
+                Autonomous Electrified Vehicle (AEV), combining electric
+                propulsion, Linux, ROS, sensing, localization, mapping, and
+                autonomous driving.
+              </p>
+              <div class="project-meta">
+                <span>McMaster AEV</span> <span>ROS</span> <span>Linux</span>
+                <span>LiDAR + IMU</span> <span>VESC</span>
+                <span>Self-driving Vehicle</span>
+              </div>
+            </div>
+            <div class="project-panel">
+              <h3>Project snapshot</h3>
+              <p>
+                This project brought together multiple areas of electrical
+                engineering through a small-scale autonomous vehicle platform.
+                Work across the term included Linux and ROS setup, sensor
+                integration, VESC and propulsion experiments, manual driving and
+                odometry calibration, localization and occupancy grid mapping,
+                and autonomous wall-following control.
+              </p>
+            </div>
+          </div>
+          <div class="project-cover">
+            <div class="project-cover-placeholder">
+              <div>
+                <img
+                  src="images/3ey4-cover.png"
+                  alt="3EY4 project visual"
+                  class="lightbox-image"
+                />
+                <p>
+                  <!-- Good options: the MacAEV photo, ROS / rviz screenshot, mapping output,                localization figure, or autonomous driving setup. -->
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="project-layout">
+        <div class="container project-sections">
+          <div class="overview-grid">
+            <div class="overview-card">
+              <h3>Focus</h3>
+              <p>
+                System integration across software, controls, sensors, and
+                propulsion.
+              </p>
+            </div>
+            <div class="overview-card">
+              <h3>Platform</h3>
+              <p>
+                McMaster Autonomous Electrified Vehicle built on a small RC
+                vehicle platform.
+              </p>
+            </div>
+            <div class="overview-card">
+              <h3>Tools</h3>
+              <p>
+                Linux, ROS, Python, C/C++, MATLAB/Simulink, rviz, VESC Tool.
+              </p>
+            </div>
+            <div class="overview-card">
+              <h3>Outcome</h3>
+              <p>
+                From manual operation and calibration to mapping and autonomous
+                vehicle control.
+              </p>
+            </div>
+          </div>
+          <div class="case-card">
+            <span class="section-label">Overview</span>
+            <h2>What the project was about</h2>
+            <p>
+              ELECENG 3EY4 was a design and implementation project centered on
+              electrified autonomous vehicles. The course integrated topics from
+              electric machines and drives, robotics, control systems,
+              estimation, signal processing, and optimization through weekly and
+              biweekly project milestones.
+            </p>
+            <p>
+              The project used the McMaster AEV platform and expected students
+              to develop and integrate software and hardware modules for
+              sensing, planning, and control, progressing from manual driving to
+              driver-assist and then more autonomous functionality.
+            </p>
+          </div>
+          <div class="split-case-grid">
+            <div class="case-card">
+              <span class="section-label">My role</span>
+              <h2>What I contributed</h2>
+              <p>
+                I contributed to the system integration workflow by working
+                across setup, testing, debugging, and implementation tasks tied
+                to the AEV platform. My work involved connecting theory from
+                prior courses to hands-on vehicle behavior, software tools, and
+                real sensor-driven experimentation.
+              </p>
+              <ul>
+                <li>Set up and worked within Linux and ROS environments</li>
+                <li>Tested AEV components and software stack behavior</li>
+                <li>Worked with vehicle sensing and integration concepts</li>
+                <li>
+                  Contributed to localization, mapping, and control activities
+                </li>
+                <li>
+                  Connected lab outputs to technical reporting and system
+                  understanding
+                </li>
+              </ul>
+            </div>
+            <div class="case-card">
+              <span class="section-label">Why it mattered</span>
+              <h2>Why this project stands out</h2>
+              <p>
+                This project stands out because it was not just about one
+                isolated circuit or one software task. It required understanding
+                how propulsion, sensing, software, frames of reference, and
+                control logic all interact within one working engineering
+                system.
+              </p>
+              <p>
+                It also pushed me to think beyond implementation and consider
+                calibration, system behavior, testing conditions, and how
+                modules connect into a larger technical workflow.
+              </p>
+            </div>
+          </div>
+          <div class="case-card">
+            <span class="section-label">System areas</span>
+            <h2>Main technical components</h2>
+            <div class="tools-cloud">
+              <span>Linux Commands</span> <span>ROS Nodes & Topics</span>
+              <span>F1TENTH Simulator</span> <span>Joystick Control</span>
+              <span>VESC Programming</span> <span>Motor Drive Experiments</span>
+              <span>Wheel Odometry</span> <span>IMU Integration</span>
+              <span>LiDAR</span> <span>Occupancy Grid Mapping</span>
+              <span>Wall Following</span> <span>Autonomous Driving</span>
+            </div>
+          </div>
+          <div class="case-card">
+            <span class="section-label">Project journey</span>
+            <h2>How the work progressed</h2>
+            <div class="timeline">
+              <div class="timeline-item">
+                <h3>1. Linux foundations</h3>
+                <p>
+                  Early work focused on Linux command-line basics, which
+                  supported later programming, file management, and system
+                  control tasks on the AEV platform.
+                </p>
+              </div>
+              <div class="timeline-item">
+                <h3>2. ROS and component testing</h3>
+                <p>
+                  The next stage introduced ROS structure, including nodes,
+                  topics, and system communication, alongside testing of
+                  McMaster AEV components.
+                </p>
+              </div>
+              <div class="timeline-item">
+                <h3>3. VESC and propulsion system work</h3>
+                <p>
+                  We then worked with the electronic speed controller and
+                  propulsion system, including VESC Tool, motor operation, and
+                  speed / duty-cycle / current related experiments.
+                </p>
+              </div>
+              <div class="timeline-item">
+                <h3>4. Manual driving and calibration</h3>
+                <p>
+                  The project then moved into simulator setup, manual driving,
+                  and odometry calibration to better understand the vehicle
+                  control stack and bridge simulation with experiment.
+                </p>
+              </div>
+              <div class="timeline-item">
+                <h3>5. Localization and mapping</h3>
+                <p>
+                  Later work focused on coordinate frames, odometry, IMU usage,
+                  LiDAR scan data, and occupancy grid mapping for environment
+                  representation.
+                </p>
+              </div>
+              <div class="timeline-item">
+                <h3>6. Autonomous driving</h3>
+                <p>
+                  The final phase focused on self-driving logic, including wall
+                  following, feedback control, and barrier-based autonomous
+                  driving strategies.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="highlight-grid">
+            <div class="highlight-box">
+              <h3>Systems thinking</h3>
+              <p>
+                I had to think about how software, electronics, sensing, and
+                mechanics worked together, not just as separate tasks.
+              </p>
+            </div>
+            <div class="highlight-box">
+              <h3>Testing mindset</h3>
+              <p>
+                This project emphasized calibration, observation, and iterative
+                refinement rather than one-time implementation.
+              </p>
+            </div>
+            <div class="highlight-box">
+              <h3>Real integration work</h3>
+              <p>
+                It connected theory from multiple courses into one realistic
+                engineering system with practical constraints.
+              </p>
+            </div>
+          </div>
+          <div class="split-case-grid">
+            <div class="case-card">
+              <span class="section-label">Technical detail</span>
+              <h2>ROS, sensors, and vehicle state</h2>
+              <p>
+                A major part of the project involved learning how the AEV
+                software stack was structured in ROS. This included
+                understanding nodes, topics, and frame relationships, then
+                applying those concepts to data from the vehicle’s LiDAR, IMU,
+                camera, and wheel odometry.
+              </p>
+              <p>
+                That made the project feel much more like a full embedded and
+                robotics system rather than a standalone coding lab.
+              </p>
+            </div>
+            <div class="case-card">
+              <span class="section-label">Technical detail</span>
+              <h2>Motor drive and propulsion</h2>
+              <p>
+                Another major part of the project focused on the AEV propulsion
+                system through the BLDC motor and VESC. This included
+                understanding how electrical input power is converted into
+                propulsion, how the speed controller is configured and tested,
+                and how variables like speed, duty cycle, voltage, and current
+                relate to system behavior.
+              </p>
+            </div>
+          </div>
+          <div class="case-card">
+            <span class="section-label">Visuals</span>
+            <h2>Gallery</h2>
+            <div class="image-gallery">
+              <div class="gallery-card">
+                <div class="gallery-placeholder">
+                  <img
+                    src="images/3ey4-nodes.png"
+                    alt="ROS node topology diagram"
+                    class="lightbox-image"
+                  />
+                </div>
+                <div class="gallery-caption">
+                  <h3>ROS node topology</h3>
+                  <!-- <p>ROS node and topic structure for the AEV platform.</p> -->
+                </div>
+              </div>
+              <div class="gallery-card">
+                <div class="gallery-placeholder">
+                  <img
+                    src="images/rviz.jpg"
+                    alt="RViz simulation environment screenshot"
+                    class="lightbox-image"
+                    style="object-position: top"
+                  />
+                </div>
+                <div class="gallery-caption">
+                  <h3>Simulation and ROS</h3>
+                  <!-- <p>RViz environment showing the AEV platform visualization.</p> -->
+                </div>
+              </div>
+              <div class="gallery-card">
+                <div class="gallery-placeholder">
+                  <img
+                    src="images/visualization.png"
+                    alt="Localization and mapping visualization"
+                    class="lightbox-image"
+                  />
+                </div>
+                <div class="gallery-caption">
+                  <h3>Localization and mapping</h3>
+                  <!-- <p>Include any occupancy grid, odometry, or sensing-based visualization.</p> -->
+                </div>
+              </div>
+              <div class="gallery-card">
+                <div class="gallery-placeholder">
+                  <img
+                    src="images/vesc.png"
+                    alt="VESC Tool interface showing motor experiment data"
+                    class="lightbox-image"
+                    style="object-position: top"
+                  />
+                </div>
+                <div class="gallery-caption">
+                  <h3>Propulsion system work</h3>
+                  <!-- <p>VESC Tool interface with motor drive experiment data.</p> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="outcome-banner">
+            <h2>Key takeaway</h2>
+            <p>
+              3EY4 strengthened my ability to work across multiple engineering
+              layers at once: software setup, sensing, control, motor systems,
+              debugging, and testing. It is one of the best examples in my
+              portfolio of moving from theory into integrated implementation.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>© <span id="year"></span> Zunairah Hasan</p>
+        <p>Built with HTML, CSS, and JavaScript</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

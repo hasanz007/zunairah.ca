@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2SH4 | Zunairah Hasan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<style>
+  .project-hero h1 {
+    background: linear-gradient(135deg, #ff4757, #cc3344);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .project-kicker { color: #ff4757; }
+  .project-kicker::before { background: #ff4757; }
+  .project-meta span { border-color: rgba(255,71,87,0.25); }
+  .section-label { color: #ff4757; }
+  .back-link { color: #ff4757; }
+  .overview-card h3 { color: #ff4757; }
+  .case-card h2, .outcome-banner h2 {
+    background: linear-gradient(135deg, #ff4757, #cc3344);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .project-kicker { color: #000000; }
+  .section-label { color: #000000; }
+  .tools-cloud span { color: #ff4757; border-color: rgba(255,71,87,0.18); }
+  .tools-cloud span:hover { border-color: rgba(255,71,87,0.40); background: rgba(255,71,87,0.06); }
+  .tools-cloud span.active { background: rgba(255,71,87,0.15); border-color: rgba(255,71,87,0.55); box-shadow: 0 0 16px rgba(255,71,87,0.12); color: #2d2942; }
+  .timeline-item { border-left-color: rgba(255,71,87,0.35); }
+  .code-dot { background: rgba(255,71,87,0.2); }
+  .code-dot.active { background: #ff4757; }
+  .code-slide { border-color: rgba(255,71,87,0.12); }
+  .outcome-banner { border-color: rgba(255,71,87,0.18); }
+  .highlight-box { border-color: rgba(255,71,87,0.16); }
+  .project-cover-placeholder {
+    background:
+      linear-gradient(135deg, rgba(255,255,255,0.7), rgba(255,71,87,0.10)),
+      radial-gradient(circle at top right, rgba(255,71,87,0.20), transparent 35%),
+      radial-gradient(circle at bottom left, rgba(255,71,87,0.12), transparent 35%);
+  }
+  .game-over-box h3 { color: #ff4757; }
+  .snake-repo-link a { color: #ff4757; }
+</style>
+  </head>
+  <body class="project-page">
+    <div class="ambient-voltage" id="ambientVoltage"></div>
+    <div class="lightbox" id="lightbox">
+      <span class="lightbox-close" id="lightboxClose"> ×</span>
+      <img
+        class="lightbox-content"
+        id="lightboxImg"
+        alt="Expanded project image"
+      />
+    </div>
+    <!-- <div class="site-decor" aria-hidden="true">
+    <span class="grid-overlay">
+</span>
+    <span class="decor-orb orb-1">
+</span>
+    <span class="decor-orb orb-2">
+</span>
+    <span class="decor-orb orb-3">
+</span>
+    <span class="schematic-sticker sticker-resistor">
+</span>
+    <span class="schematic-sticker sticker-capacitor">
+</span>
+    <span class="schematic-sticker sticker-wave">
+</span>
+    <span class="schematic-sticker sticker-chip">
+</span>
+  </div>
+ -->
+    <div class="easter-eggs" aria-hidden="true">
+      <span class="ee-schematic ee-resistor"></span>
+      <span class="ee-schematic ee-capacitor"></span>
+      <span class="ee-schematic ee-wave"></span>
+      <span class="ee-schematic ee-chip"></span>
+      <span class="ee-schematic ee-inductor"></span>
+      <span class="ee-schematic ee-diode"></span>
+      <span class="ee-schematic ee-opamp"></span>
+      <span class="ee-text ee-binary-1">C++ • UML • OOD</span>
+      <span class="ee-text ee-binary-2">FSM • objPos • VS Code</span>
+      <span class="ee-text ee-data-1">10101101</span>
+      <span class="ee-text ee-data-2">CLK • DATA • GND</span>
+      <span class="ee-text ee-data-3">R = 220Ω</span>
+      <span class="ee-spark ee-spark-1"></span>
+      <span class="ee-spark ee-spark-2"></span>
+      <span class="ee-spark ee-spark-3"></span>
+    </div>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="index.html#home" class="logo">
+          <img src="images/name.png" alt="Zunairah Hasan" class="logo-name" />
+        </a>
+<nav class="nav">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="projects.html" class="active-link">Projects</a>
+  <a href="contact.html">Contact</a>
+</nav>
+<button class="menu-btn" id="menuBtn" aria-label="Open menu">
+  <span></span><span></span><span></span>
+</button>
+</div>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="projects.html">Projects</a>
+  <a href="contact.html">Contact</a>
+</div>
+    </header>
+    <main>
+      <section class="project-hero" id="home">
+        <div class="container">
+          <a class="back-link" href="projects.html">
+            ← Back to Projects</a
+          >
+          <div class="project-hero-grid">
+            <div>
+              <p class="project-kicker">ELECENG 3EY4</p>
+              <h1>C++ OOD Snake Game</h1>
+              <p>
+                My main software project was a two-person object-oriented Snake
+                game built in C++. The project focused on translating
+                foundational programming concepts into a complete interactive
+                system, combining asynchronous input, game-loop logic, finite
+                state machine movement, random item generation, collision
+                detection, score updates, and dynamic memory management within a
+                structured OOD design.
+              </p>
+              <div class="project-meta">
+                <span> C++</span>
+                <span> Object-Oriented Design</span>
+                <span> FSM</span>
+                <span> Dynamic Memory</span>
+                <span> Game Logic</span>
+              </div>
+              <div class="project-quick-links">
+                <a
+                  href="https://github.com/hasanz007/course-project-404-partner-not-found"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View on GitHub →</a
+                >
+              </div>
+            </div>
+            <div class="project-panel">
+              <h3>Project snapshot</h3>
+              <p>
+                I built a classic Snake game where the snake moves around the
+                board using four-direction controls, wraps around boundaries,
+                grows after eating food, increases score, and ends when the head
+                collides with the body. The project emphasized modular object
+                interaction rather than procedural code.
+              </p>
+            </div>
+          </div>
+          <div class="project-cover">
+            <div class="project-cover-placeholder">
+              <div>
+                <img
+                  src="images/Snakegame-cover.png"
+                  alt="2SH4 project visual"
+                  class="lightbox-image"
+                />
+                <p>
+                  <!-- Good options: the MacAEV photo, ROS / rviz screenshot, mapping output,                localization figure, or autonomous driving setup. -->
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="project-layout" id="about">
+        <div class="container project-sections">
+          <div class="overview-grid" id="overview">
+            <div class="overview-card">
+              <h3>Course focus</h3>
+              <p>
+                Object-oriented programming, modular software design, dynamic
+                memory, and interactive game systems.
+              </p>
+            </div>
+            <div class="overview-card">
+              <h3>Main project</h3>
+              <p>
+                A C++ OOD implementation of the classic Snake game using
+                structured object interaction.
+              </p>
+            </div>
+            <div class="overview-card">
+              <h3>Main challenge</h3>
+              <p>
+                Integrating movement, food, growth, score, and collision logic
+                while respecting required OOD design rules.
+              </p>
+            </div>
+            <div class="overview-card">
+              <h3>Final outcome</h3>
+              <p>
+                A complete interactive snake game built with modular classes,
+                list-based body tracking, and memory-aware design.
+              </p>
+            </div>
+          </div>
+          <div class="case-card">
+            <span class="section-label"> Project Overview</span>
+            <h2>What I built</h2>
+            <p>
+              The project recreated a classic Snake game in C++ using
+              object-oriented design. Food appears at random valid positions on
+              the board, the snake moves continuously with directional input,
+              wraps around the board edges, grows when food is collected,
+              increments the score, and ends the game when the snake collides
+              with itself. The project had to compile cleanly, avoid memory
+              leaks, and follow the required OOD structure.
+            </p>
+          </div>
+          <div class="case-card">
+            <span class="section-label"> Architecture</span>
+            <h2>How the design was structured</h2>
+            <div class="timeline">
+              <div class="timeline-item">
+                <h3>objPos</h3>
+                <p>
+                  Represented a single game-board position and symbol. This
+                  acted like the smallest building block of the game board,
+                  encapsulating coordinate and character information into one
+                  reusable object.
+                </p>
+              </div>
+              <div class="timeline-item">
+                <h3>objPosArrayList</h3>
+                <p>
+                  Provided an ordered list of `objPos` items. In the Snake
+                  project, this was especially important for tracking the snake
+                  body and supporting operations like head insertion, tail
+                  removal, and growth.
+                </p>
+              </div>
+              <div class="timeline-item">
+                <h3>GameMechs</h3>
+                <p>
+                  Collected the core game state, including input, exit
+                  conditions, lose conditions, score, board size, and food
+                  position. This kept the game mechanics organized instead of
+                  scattering variables globally.
+                </p>
+              </div>
+              <div class="timeline-item">
+                <h3>Player</h3>
+                <p>
+                  Encapsulated the snake’s movement, direction state, and body
+                  tracking. It also handled interactions with the game mechanics
+                  object, including food checks, body growth, and self-collision
+                  behavior.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="case-card">
+            <span class="section-label"> OOD Architecture</span>
+            <h2>How the classes connect</h2>
+            <p>
+              The project follows a layered OOD structure:
+              <strong>objPos</strong> represents a single board cell,
+              <strong>objPosArrayList</strong> tracks the snake body as a
+              dynamic array, <strong>GameMechs</strong> holds game state
+              (score, input, flags), <strong>Player</strong> owns movement and
+              collision logic, and <strong>Food</strong> handles random
+              generation avoiding the snake. The UML diagram below shows how
+              these objects interact.
+            </p>
+            <img
+              class="gallery-image"
+              src="images/UML.png"
+              alt="UML class diagram"
+              style="
+                border-radius: var(--radius-sm);
+                margin-top: 0.8rem;
+                width: 100%;
+              "
+            />
+          </div>
+          <div class="split-case-grid">
+            <div class="case-card">
+              <span class="section-label"> Key Features</span>
+              <h2>Gameplay features</h2>
+              <ul>
+                <li>Asynchronous keyboard input and game loop updates</li>
+                <li>Four-direction snake movement</li>
+                <li>Boundary wraparound at the edges of the board</li>
+                <li>Random food generation on valid spaces</li>
+                <li>Food collision detection</li>
+                <li>Snake body growth after eating</li>
+                <li>Score tracking</li>
+                <li>Game-over detection when the snake collides with itself</li>
+                <li>
+                  Memory-safe implementation with attention to heap cleanup
+                </li>
+              </ul>
+            </div>
+            <div class="case-card">
+              <span class="section-label"> Engineering Focus</span>
+              <h2>What made this project important</h2>
+              <p>
+                This project was more than just “making a game.” It was really
+                about designing a software system with clear object boundaries,
+                reusable data structures, and sustainable logic organization.
+                The project manual specifically emphasized that procedural-style
+                solutions would not be accepted and that the mandatory object
+                design had to be respected.
+              </p>
+            </div>
+          </div>
+          <div class="case-card">
+            <span class="section-label"> How the course built up to it</span>
+            <h2>PPA foundations that led into the Snake project</h2>
+            <div class="timeline">
+              <div class="timeline-item">
+                <h3>PPA1 — Program loop and asynchronous input</h3>
+                <p>
+                  The course first introduced the structure of a persistent
+                  interactive program using initialize, input, logic, drawing,
+                  delay, and cleanup stages. That loop structure became the
+                  foundation for the final Snake game.
+                </p>
+              </div>
+              <div class="timeline-item">
+                <h3>PPA2 — FSM movement and wraparound</h3>
+                <p>
+                  PPA2 developed the player movement system using WASD control,
+                  direction state, and boundary wraparound. These ideas carried
+                  directly into the Snake project’s player movement and
+                  directional behavior.
+                </p>
+              </div>
+              <div class="timeline-item">
+                <h3>PPA3 — Random items, collision, and updates</h3>
+                <p>
+                  PPA3 added random item generation, collision handling, state
+                  updates after collection, and heap-based data management.
+                  These concepts fed directly into food generation, food
+                  consumption, and score updating in Snake.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="split-case-grid">
+            <div class="case-card">
+              <span class="section-label"> Technical Growth</span>
+              <h2>What I improved most</h2>
+              <p>
+                This project significantly improved my confidence with
+                object-oriented design and dynamic memory in C++. It pushed me
+                to think in terms of object interactions, modular
+                responsibilities, and incremental testing rather than writing
+                one large block of procedural logic.
+              </p>
+            </div>
+            <div class="case-card">
+              <span class="section-label"> Debugging Mindset</span>
+              <h2>How I approached development</h2>
+              <p>
+                The project strongly emphasized incremental engineering:
+                validating each feature step by step before adding the next one.
+                That approach was especially important for movement logic,
+                array-list behavior, collision handling, and avoiding memory
+                leaks or runtime failures.
+              </p>
+            </div>
+          </div>
+          <div class="case-card snake-game-card">
+            <span class="section-label"> Play It</span>
+            <h2>Play the Snake Game</h2>
+            <p>
+              Play a browser version of the game that mirrors the same C++ OOD
+              architecture — same classes, same logic, same FSM-based movement.
+            </p>
+            <div class="snake-game-layout">
+              <div class="snake-2d-wrap">
+                <canvas
+                  id="snakeCanvas2D"
+                  class="snake-canvas-2d"
+                  width="600"
+                  height="300"
+                >
+                </canvas>
+                <div class="snake-score" id="snakeScore">Score: 0</div>
+                <div class="snake-controls">
+                  <span> WASD / Arrow keys to move</span>
+                  <span> R to restart</span>
+                  <span> + / - for speed</span>
+                </div>
+              </div>
+              <div class="snake-3d-wrap">
+                <div id="snakeCanvas3D" class="snake-canvas-3d"></div>
+                <div class="snake-3d-label">3D view (drag to orbit)</div>
+              </div>
+            </div>
+            <div class="game-over-overlay" id="gameOverOverlay">
+              <div class="game-over-box">
+                <h3>Game Over</h3>
+                <p id="gameOverMsg">You ran into yourself!</p>
+                <p id="gameOverScore">Score: 0</p>
+                <button class="btn btn-primary" id="restartBtn">
+                  Play Again
+                </button>
+              </div>
+            </div>
+            <div class="snake-repo-link">
+              <a
+                href="https://github.com/hasanz007/course-project-404-partner-not-found"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View source on GitHub →</a
+              >
+            </div>
+          </div>
+          <div class="case-card code-carousel-card">
+            <span class="section-label"> Key Code</span>
+            <h2>Implementation highlights</h2>
+            <div class="code-carousel" id="codeCarousel">
+              <div class="code-slides" id="codeSlides">
+                <pre class="code-slide active">
+<code class="language-cpp">
+// Player movement with FSM, wrap-around &amp; growth
+void Player::movePlayer(bool foodConsumed) {
+    int newX = playerPosList-&gt;getHeadElement().pos-&gt;x;
+    int newY = playerPosList-&gt;getHeadElement().pos-&gt;y;
+    switch (myDir) {
+        case UP:    newY--; break;
+        case DOWN:  newY++; break;
+        case LEFT:  newX--; break;
+        case RIGHT: newX++; break;
+        default:    return;
+    }
+    // Wrap-around inside the border
+    int boardWidth = mainGameMechsRef-&gt;getBoardSizeX();
+    int boardHeight = mainGameMechsRef-&gt;getBoardSizeY();
+    if (newX &lt; 1) newX = boardWidth - 2;
+    else if (newX &gt;= boardWidth - 1) newX = 1;
+    if (newY &lt; 1) newY = boardHeight - 2;
+    else if (newY &gt;= boardHeight - 1) newY = 1;
+    // Self-collision ends the game
+    if (selfCollisionChecker()) {
+        mainGameMechsRef-&gt;setLoseFlag();
+        mainGameMechsRef-&gt;setExitTrue();
+    }
+    playerPosList-&gt;insertHead(objPos(newX, newY, '@'));
+    if (!foodConsumed) playerPosList-&gt;removeTail();
+}</code>
+</pre>
+                <pre class="code-slide">
+<code class="language-cpp">
+// Food generation — avoids spawning on the snake
+void Food::generateFood(const objPosArrayList* playerPositions) {
+    bool validPosition = false;
+    int newX, newY;
+    while (!validPosition) {
+        newX = 1 + std::rand() % (boardSizeX - 2);
+        newY = 1 + std::rand() % (boardSizeY - 2);
+        validPosition = true;
+        for (int i = 0; i &lt; playerPositions-&gt;getSize(); ++i) {
+            objPos playerPos = playerPositions-&gt;getElement(i);
+            if (playerPos.pos-&gt;x == newX &amp;&amp;
+                playerPos.pos-&gt;y == newY) {
+                validPosition = false;
+                break;
+            }
+        }
+    }
+    foodPos.setObjPos(newX, newY, '*');
+}</code>
+</pre>
+                <pre class="code-slide">
+<code class="language-cpp">
+// Array-list shift-insert for snake body tracking
+void objPosArrayList::insertHead(objPos thisPos) {
+    if (listSize &gt;= arrayCapacity) return;
+    for (int i = listSize; i &gt; 0; i--) {
+        aList[i] = aList[i - 1];
+    }
+    aList[0] = thisPos;
+    listSize++;
+}
+
+objPos objPosArrayList::getHeadElement() const {
+    return (listSize &gt; 0) ? aList[0] : objPos();
+}
+
+void objPosArrayList::removeTail() {
+    if (listSize == 0) return;
+    listSize--;
+}</code>
+</pre>
+              </div>
+              <div class="code-dots" id="codeDots">
+                <span class="code-dot active"> </span>
+                <span class="code-dot"> </span>
+                <span class="code-dot"> </span>
+              </div>
+            </div>
+          </div>
+          <div class="case-card">
+            <span class="section-label"> Tools Used</span>
+            <h2>Technical stack</h2>
+            <div class="tools-cloud">
+              <span> C++</span>
+              <span> Object-Oriented Design</span>
+              <span> VS Code</span>
+              <span> GitHub</span>
+              <span> MacUILib</span>
+              <span> Dynamic Memory</span>
+              <span> Array List Design</span>
+              <span> FSM Logic</span>
+              <span> Debugging</span>
+            </div>
+          </div>
+          <div class="outcome-banner">
+            <h2>Outcome</h2>
+            <p>
+              This project gave me my strongest early software project
+              foundation through the C++ OOD Snake game. It shows that I can
+              build an interactive technical system from the ground up,
+              structure logic through objects, manage dynamic memory carefully,
+              and translate lower-level programming concepts into a complete
+              working product.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+    <script src="snake-game.js"></script>
+  </body>
+</html>

@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal PC Build | Custom Desktop Project</title>
+    <meta
+      name="description"
+      content="Personal custom PC build portfolio page featuring component selection, assembly, cooling, storage, and performance-focused desktop design."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"
+    />
+    `n
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    `n
+<style>
+  .project-hero h1 {
+    background: linear-gradient(135deg, #ff87b2, #cc6d8e);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .project-kicker { color: #ff87b2; }
+  .project-kicker::before { background: #ff87b2; }
+  .project-meta span { border-color: rgba(255,135,178,0.25); }
+  .section-label { color: #ff87b2; }
+  .back-link { color: #ff87b2; }
+  .overview-card h3 { color: #ff87b2; }
+  .case-card h2, .outcome-banner h2 {
+    background: linear-gradient(135deg, #ff87b2, #cc6d8e);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .project-kicker { color: #000000; }
+  .section-label { color: #000000; }
+  .tools-cloud span { color: #ff87b2; border-color: rgba(255,135,178,0.18); }
+  .tools-cloud span:hover { border-color: rgba(255,135,178,0.40); background: rgba(255,135,178,0.06); }
+  .tools-cloud span.active { background: rgba(255,135,178,0.15); border-color: rgba(255,135,178,0.55); box-shadow: 0 0 16px rgba(255,135,178,0.12); color: #2d2942; }
+  .timeline-item { border-left-color: rgba(255,135,178,0.35); }
+  .code-dot { background: rgba(255,135,178,0.2); }
+  .code-dot.active { background: #ff87b2; }
+  .code-slide { border-color: rgba(255,135,178,0.12); }
+  .outcome-banner { border-color: rgba(255,135,178,0.18); }
+  .highlight-box { border-color: rgba(255,135,178,0.16); }
+  .project-cover-placeholder {
+    background:
+      linear-gradient(135deg, rgba(255,255,255,0.7), rgba(255,135,178,0.10)),
+      radial-gradient(circle at top right, rgba(255,135,178,0.20), transparent 35%),
+      radial-gradient(circle at bottom left, rgba(255,135,178,0.12), transparent 35%);
+  }
+</style>
+  </head>
+  <body class="project-page">
+    <div class="ambient-voltage" id="ambientVoltage"></div>
+    <div class="lightbox" id="lightbox">
+      <span class="lightbox-close" id="lightboxClose">×</span>
+      <img
+        class="lightbox-content"
+        id="lightboxImg"
+        alt="Expanded project image"
+      />
+    </div>
+    <div class="easter-eggs" aria-hidden="true">
+      <span class="ee-schematic ee-resistor"></span>
+      <span class="ee-schematic ee-capacitor"></span>
+      <span class="ee-schematic ee-wave"></span>
+      <span class="ee-schematic ee-chip"></span>
+      <span class="ee-schematic ee-inductor"></span>
+      <span class="ee-schematic ee-diode"></span>
+      <span class="ee-schematic ee-opamp"></span>
+      <span class="ee-text ee-binary-1">Intel • Corsair • Cooling</span>
+      <span class="ee-text ee-binary-2">Custom Build • Storage • Performance</span>
+      <span class="ee-text ee-data-1">10101101</span>
+      <span class="ee-text ee-data-2">CLK • DATA • GND</span>
+      <span class="ee-text ee-data-3">R = 220Ω</span>
+      <span class="ee-spark ee-spark-1"></span>
+      <span class="ee-spark ee-spark-2"></span>
+      <span class="ee-spark ee-spark-3"></span>
+    </div>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="index.html#home" class="logo">
+          <img src="images/name.png" alt="Zunairah Hasan" class="logo-name" />
+        </a>
+<nav class="nav">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="projects.html" class="active-link">Projects</a>
+  <a href="contact.html">Contact</a>
+</nav>
+<button class="menu-btn" id="menuBtn" aria-label="Open menu">
+  <span></span><span></span><span></span>
+</button>
+</div>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="projects.html">Projects</a>
+  <a href="contact.html">Contact</a>
+</div>
+    </header>
+    <main>
+      <section class="project-hero" id="home">
+        <div class="container">
+          <a class="back-link" href="projects.html">← Back to Projects</a>
+          <div class="project-hero-grid">
+            <div>
+              <p class="project-kicker">PERSONAL BUILD</p>
+              <h1>Custom PC Build</h1>
+              <p>
+                A personal desktop build focused on performance, cooling, clean
+                component selection, and a polished visual setup. This build
+                combined modern hardware choices with practical assembly, cable
+                management, and thermal planning.
+              </p>
+              <div class="project-meta">
+                <span>Intel Core i9 285K</span> <span>32GB RAM</span>
+                <span>Corsair 3500X</span> <span>Liquid Cooling</span>
+                <span>1TB SSD</span> <span>2TB HDD</span>
+                <span>Corsair RM850e PSU</span>
+                <span>NVIDIA 5070 (Planned)</span>
+              </div>
+            </div>
+            <div class="project-panel">
+              <h3>Project snapshot</h3>
+              <p>
+                This project involved planning and assembling a custom PC around
+                a high-performance Intel processor, a Corsair iCUE LINK TITAN
+                360 RX LCD liquid cooler, mixed SSD and hard drive storage, and
+                a Corsair 3500X case. Beyond the build itself, it reflects an
+                interest in hardware selection, system layout, airflow, and
+                creating a machine that balances power, cooling, and aesthetics.
+              </p>
+            </div>
+          </div>
+          <div class="project-cover">
+            <div class="project-cover-placeholder">
+              <div>
+                <img
+                  src="images/pc-cover.png"
+                  alt="Custom PC build"
+                  class="lightbox-image"
+                />
+                <p><!-- Put your best overall build photo here --></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="project-layout">
+        <div class="container project-sections">
+          <div class="overview-grid">
+            <div class="overview-card">
+              <h3>Focus</h3>
+              <p>
+                Custom desktop assembly with strong performance, cooling, and
+                clean internal layout.
+              </p>
+            </div>
+            <div class="overview-card">
+              <h3>CPU</h3>
+              <p>
+                Built around an Intel Core i9 285K for high-end processing
+                power.
+              </p>
+            </div>
+            <div class="overview-card">
+              <h3>Cooling</h3>
+              <p>
+                Corsair iCUE LINK TITAN 360 RX LCD liquid CPU cooler for thermal
+                control and visual appeal.
+              </p>
+            </div>
+            <div class="overview-card">
+              <h3>Outcome</h3>
+              <p>
+                A clean and powerful personal PC build designed for performance
+                and presentation.
+              </p>
+            </div>
+          </div>
+          <div class="case-card">
+            <span class="section-label">Overview</span>
+            <h2>What this build was about</h2>
+            <p>
+              This was a personal custom PC build that brought together hardware
+              focused on performance and a clean modern case layout. I wanted to
+              create a system that felt strong in both function and
+              presentation, with attention to cooling, storage balance, and
+              overall component fit. I am also planning to upgrade the system
+              with an NVIDIA 5070 GPU to further enhance graphics performance
+              and overall system capability.
+            </p>
+            <p>
+              The build process involved choosing compatible parts, thinking
+              through airflow and case space, and assembling the system in a way
+              that kept the interior organized and visually polished. It was
+              also a chance to build practical confidence with real desktop
+              hardware. Power delivery was supported by a Corsair RM850e power
+              supply, ensuring stable performance and headroom for future GPU
+              upgrades.
+            </p>
+          </div>
+          <div class="split-case-grid">
+            <div class="case-card">
+              <span class="section-label">My role</span>
+              <h2>What I worked on</h2>
+              <p>
+                I planned and assembled the system, selected the core hardware,
+                and put together a build that balanced performance, storage,
+                cooling, and appearance. This included thinking through how all
+                the parts would fit and work together physically inside the
+                case.
+              </p>
+              <ul>
+                <li>Selected the main performance components</li>
+                <li>Built around an Intel Core i9 285K processor</li>
+                <li>Integrated liquid cooling for CPU temperature control</li>
+                <li>Configured both SSD and hard drive storage</li>
+                <li>
+                  Worked within the Corsair 3500X case for layout and
+                  presentation
+                </li>
+                <li>Focused on clean assembly and an organized final build</li>
+              </ul>
+            </div>
+            <div class="case-card">
+              <span class="section-label">Why it mattered</span>
+              <h2>Why this project is worth showing</h2>
+              <p>
+                Even though this was a personal build, it still reflects problem
+                solving, technical planning, and hands-on execution. It shows
+                interest beyond coursework and highlights comfort with hardware,
+                system organization, and decision making.
+              </p>
+              <p>
+                It also represents a different side of technical work which is
+                assembling a system and making design choices that affect
+                usability, performance, and visual finish.
+              </p>
+            </div>
+          </div>
+          <div class="case-card">
+            <span class="section-label">Core components</span>
+            <h2>Main build specifications</h2>
+            <div class="tools-cloud">
+              <span>Intel Core i9 285K</span> <span>32GB RAM</span>
+              <span>Corsair iCUE LINK TITAN 360 RX LCD</span>
+              <span>1TB Samsung 980 SSD</span>
+              <span>2TB Seagate Hard Drive</span>
+              <span>Corsair 3500X Case</span> <span>Liquid Cooling</span>
+              <span>Corsair RM850e (850W PSU)</span>
+              <span>NVIDIA 5070 (Planned GPU Upgrade)</span>
+              <span>Custom Desktop Build</span>
+            </div>
+          </div>
+          <div class="case-card">
+            <span class="section-label">Build process</span>
+            <h2>How the build came together</h2>
+            <div class="timeline">
+              <div class="timeline-item">
+                <h3>1. Component Acquirement</h3>
+                <p>
+                  The build started with selecting major components that would
+                  work together well in terms of performance, cooling
+                  requirements, and case compatibility.
+                </p>
+              </div>
+              <div class="timeline-item">
+                <h3>2. Performance and storage balance</h3>
+                <p>
+                  I combined a fast Samsung 980 SSD for primary storage with a
+                  larger Seagate hard drive for additional capacity, creating a
+                  setup that balanced speed and space.
+                </p>
+              </div>
+              <div class="timeline-item">
+                <h3>3. Cooling setup</h3>
+                <p>
+                  A major part of the build was integrating the Corsair iCUE
+                  LINK TITAN 360 RX LCD liquid CPU cooler, which added both
+                  thermal performance and a strong visual centerpiece.
+                </p>
+              </div>
+              <div class="timeline-item">
+                <h3>4. Physical assembly</h3>
+                <p>
+                  The system was assembled inside the Corsair 3500X case, with
+                  attention to part placement, internal organization, and
+                  creating a clean-looking build.
+                </p>
+              </div>
+              <div class="timeline-item">
+                <h3>5. Final system presentation</h3>
+                <p>
+                  Once assembled, the final build reflected both hardware
+                  performance and a polished visual setup, showing the value of
+                  thoughtful layout and component choice.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="highlight-grid">
+            <div class="highlight-box">
+              <h3>Hardware planning</h3>
+              <p>
+                This build required thinking through compatibility, layout, and
+                how each part contributed to the final system.
+              </p>
+            </div>
+            <div class="highlight-box">
+              <h3>Cooling focus</h3>
+              <p>
+                The liquid cooler was a major part of the build, both
+                functionally for thermal control and visually as a standout
+                feature.
+              </p>
+            </div>
+            <div class="highlight-box">
+              <h3>Hands-on execution</h3>
+              <p>
+                It reflects practical experience with real hardware assembly
+                rather than only software or theory.
+              </p>
+            </div>
+          </div>
+          <div class="split-case-grid">
+            <div class="case-card">
+              <span class="section-label">Technical detail</span>
+              <h2>Performance-oriented hardware</h2>
+              <p>
+                The Intel Core i9 285K and 32GB of RAM gave this build a strong
+                performance foundation. Combined with the Samsung 980 SSD, the
+                system was designed to feel responsive and capable for demanding
+                workloads.
+              </p>
+              <p>
+                Choosing these components was not just about raw specs, but
+                about building a machine that felt fast, modern, and
+                well-rounded overall.
+              </p>
+            </div>
+            <div class="case-card">
+              <span class="section-label">Technical detail</span>
+              <h2>Cooling and internal layout</h2>
+              <p>
+                The Corsair iCUE LINK TITAN 360 RX LCD liquid CPU cooler played
+                an important role in both appearance and function. It helped
+                make cooling a visible part of the build rather than an
+                afterthought, while the Corsair 3500X case supported a clean and
+                display-friendly layout.
+              </p>
+            </div>
+          </div>
+          <div class="case-card">
+            <span class="section-label">Visuals</span>
+            <h2>Gallery</h2>
+            <div class="image-gallery">
+              <div class="gallery-card">
+                <!-- <div class="gallery-placeholder">Full build photo</div> -->
+                <img src="images/pc_parts.png" alt="PC Parts" />
+                <div class="gallery-caption">
+                  <h3>Components</h3>
+                  <!-- <p>Use your best overall photo showing the full PC and internal layout.</p> -->
+                </div>
+              </div>
+              <div class="gallery-card">
+                <!-- <div class="gallery-placeholder">Cooler close-up</div> -->
+                <img src="images/pc-cooler.png" alt="PC Cooler" />
+                <div class="gallery-caption">
+                  <h3>Cooling detail</h3>
+                  <!-- <p>Show the LCD liquid cooler as one of the visual centerpieces of the build.</p> -->
+                </div>
+              </div>
+              <div class="gallery-card">
+                <!-- <div class="gallery-placeholder">Internal layout</div> -->
+                <img src="images/cable-mng.png" alt="Cable Management" />
+                <div class="gallery-caption">
+                  <h3>Assembly and cable management</h3>
+                  <!-- <p>Highlight how the parts fit together inside the Corsair 3500X case.</p> -->
+                </div>
+              </div>
+              <div class="gallery-card">
+                <!-- <div class="gallery-placeholder">Build process shot</div> -->
+                <img src="images/pc-building.png" alt="PC Building" />
+                <div class="gallery-caption">
+                  <h3>In progress</h3>
+                  <!-- <p>Use a setup or assembly image to show the process behind the finished build.</p> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="outcome-banner">
+            <h2>Key takeaway</h2>
+            <p>
+              This project shows that my technical interests extend beyond
+              coursework into hands-on hardware work. It reflects planning,
+              assembly, and system-level thinking through a custom PC build that
+              combines performance, cooling, storage, and visual presentation in
+              one finished setup.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>© <span id="year"></span> Zunairah Hasan</p>
+        <p>Built with HTML, CSS, and JavaScript</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

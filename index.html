@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zunairah Hasan | Electrical Engineering Portfolio</title>
+    <meta
+      name="description"
+      content="Electrical engineering portfolio of Zunairah Hasan featuring digital logic, C/C++ programming, and embedded systems projects."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div id="bootScreen" class="boot-screen" aria-hidden="true">
+      <div class="boot-terminal">
+        <div class="boot-header">ZUN-SYSTEM v2.0 — POST SEQUENCE</div>
+        <div class="boot-output" id="bootOutput"></div>
+        <div class="boot-progress-wrap">
+          <div class="boot-progress-bar" id="bootProgress"></div>
+        </div>
+        <div class="boot-status" id="bootStatus">Initializing...</div>
+      </div>
+    </div>
+    <div class="easter-eggs" aria-hidden="true">
+      <span class="ee-schematic ee-resistor"></span>
+      <span class="ee-schematic ee-capacitor"></span>
+      <span class="ee-schematic ee-wave"></span>
+      <span class="ee-schematic ee-chip"></span>
+      <span class="ee-schematic ee-inductor"></span>
+      <span class="ee-schematic ee-diode"></span>
+      <span class="ee-schematic ee-opamp"></span>
+      <span class="ee-text ee-binary-1">1011 0010</span>
+      <span class="ee-text ee-binary-2">V = IR</span>
+      <span class="ee-text ee-data-1">10101101</span>
+      <span class="ee-text ee-data-2">CLK • DATA • GND</span>
+      <span class="ee-text ee-data-3">R = 220Ω</span>
+      <span class="ee-spark ee-spark-1"></span>
+      <span class="ee-spark ee-spark-2"></span>
+      <span class="ee-spark ee-spark-3"></span>
+    </div>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="#home" class="logo">
+          <img src="images/name.png" alt="Zunairah Hasan" class="logo-name" />
+        </a>
+        <nav class="nav">
+          <a href="#home">Home</a>
+          <a href="about.html">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a> <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </header>
+    <main>
+      <section class="hero" id="home">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <h1 class="hero-tagline">
+              <span class="gradient-animated">Design. Build. Debug.</span>
+            </h1>
+            <p class="hero-intro">I'm Zunairah Hasan, <span class="typewriter"></span></p>
+            <div class="hero-actions">
+              <a href="projects.html" class="btn btn-primary magnetic-btn"
+                >View Projects</a
+              >
+              <a href="contact.html" class="btn btn-secondary magnetic-btn"
+                >Contact Me</a
+              >
+            </div>
+            <div class="hero-freq-clock" id="freqClock">
+              <span class="freq-label">SYS CLK</span>
+              <span class="freq-time">00:00:00</span>
+            </div>
+            <div class="hero-highlights">
+              <div class="hero-note-card">
+                <span class="hero-note-label">Currently building</span>
+                <p>
+                  <strong>Electrical Systems Integration Project:</strong>
+                  Designing and integrating an autonomous electric vehicle
+                  system using ROS, LiDAR, and real-time control to bridge
+                  hardware, software, and intelligent decision-making.
+                </p>
+              </div>
+            </div>
+            <div class="hero-stats">
+              <div class="stat-card">
+                <span class="stat-number">C/C++</span>
+                <span class="stat-label">Programming & debugging</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number">Digital Logic</span>
+                <span class="stat-label"
+                  >Combinational + sequential design</span
+                >
+              </div>
+              <div class="stat-card">
+                <span class="stat-number">Embedded Systems</span>
+                <span class="stat-label">Sensors, motors, UART, testing</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="hero-motherboard" aria-hidden="true">
+              <span class="mb-scan"></span>
+            </div>
+            <div
+              class="chip-id-card interactive-id-card"
+              tabindex="0"
+              role="img"
+              aria-label="Zunairah Hasan engineering ID card"
+            >
+              <span class="id-pin id-pin-tl"></span>
+              <span class="id-pin id-pin-tc"></span>
+              <span class="id-pin id-pin-tr"></span>
+              <span class="id-pin id-pin-r1"></span>
+              <span class="id-pin id-pin-r2"></span>
+              <span class="id-pin id-pin-r3"></span>
+              <span class="id-pin id-pin-bl"></span>
+              <span class="id-pin id-pin-bc"></span>
+              <span class="id-pin id-pin-br"></span>
+              <span class="id-pin id-pin-l1"></span>
+              <span class="id-pin id-pin-l2"></span>
+              <span class="id-pin id-pin-l3"></span>
+              <div class="id-die">
+                <div class="id-die-ring"></div>
+                <img src="images/Zunairah.jpg" alt="Zunairah Hasan" class="id-photo" />
+              </div>
+              <div class="id-body">
+                <span class="id-name">Zunairah Hasan</span>
+                <span class="id-title">EE Student &bull; McMaster University</span>
+                <div class="id-tags">
+                  <span>Logic Design</span><span>C/C++</span><span>Embedded</span><span>Debugging</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="projects section" id="projects">
+        <div class="container section-shell">
+          <div class="section-heading section-heading-split">
+            <div>
+              <h2>Fix the Circuit</h2>
+            </div>
+          </div>
+          <div class="circuit-puzzle" id="circuitPuzzle">
+            <div class="cp-header">
+              <span class="cp-header-icon">⚡</span>
+              <span class="cp-header-title">Match the Terminals</span>
+              <span class="cp-header-sub">Click &amp; drag from a coloured terminal to its matching partner</span>
+            </div>
+
+            <div class="cp-board" id="cpBoard">
+              <svg class="cp-svg" id="cpSvg" aria-hidden="true"></svg>
+
+              <div class="cp-col cp-left-col">
+                <div class="cp-node" data-color="red" data-proj="0">
+                  <span class="cp-dot" style="background:#ff4757;box-shadow:0 0 8px rgba(255,71,87,0.5)"></span>
+                  <span class="cp-node-label">RED</span>
+                </div>
+                <div class="cp-node" data-color="blue" data-proj="1">
+                  <span class="cp-dot" style="background:#4488ff;box-shadow:0 0 8px rgba(68,136,255,0.5)"></span>
+                  <span class="cp-node-label">BLUE</span>
+                </div>
+                <div class="cp-node" data-color="green" data-proj="2">
+                  <span class="cp-dot" style="background:#2ed573;box-shadow:0 0 8px rgba(46,213,115,0.5)"></span>
+                  <span class="cp-node-label">GREEN</span>
+                </div>
+                <div class="cp-node" data-color="yellow" data-proj="3">
+                  <span class="cp-dot" style="background:#ffa502;box-shadow:0 0 8px rgba(255,165,2,0.5)"></span>
+                  <span class="cp-node-label">YELLOW</span>
+                </div>
+                <div class="cp-node" data-color="pink" data-proj="4">
+                  <span class="cp-dot" style="background:#ff87b2;box-shadow:0 0 8px rgba(255,135,178,0.5)"></span>
+                  <span class="cp-node-label">PINK</span>
+                </div>
+              </div>
+
+              <div class="cp-col cp-right-col" id="cpRightCol"></div>
+            </div>
+
+            <div class="cp-carousel">
+              <button class="cp-carousel-btn cp-carousel-prev" id="cpCarouselPrev" aria-label="Previous">‹</button>
+              <div class="cp-carousel-track" id="cpCarouselTrack"></div>
+              <button class="cp-carousel-btn cp-carousel-next" id="cpCarouselNext" aria-label="Next">›</button>
+            </div>
+
+            <div class="cp-progress-wrap">
+              <div class="cp-progress-text">Circuits restored: <span id="cpCount">0</span> / 5</div>
+              <div class="cp-progress-bar">
+                <div class="cp-progress-fill" id="cpFill"></div>
+              </div>
+            </div>
+            <div class="cp-footer">
+              <a href="projects.html" class="view-all-btn">View All Projects →</a>
+            </div>
+       </div>
+          </div>
+       </section>
+
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>© <span id="year"></span> Zunairah Hasan</p>
+        <p>Built with HTML, CSS, and JavaScript</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

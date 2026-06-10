@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2DI4 | Zunairah Hasan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"
+    />
+    `n
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    `n
+<style>
+  .project-hero h1 {
+    background: linear-gradient(135deg, #4488ff, #3366cc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .project-kicker { color: #4488ff; }
+  .project-kicker::before { background: #4488ff; }
+  .project-meta span { border-color: rgba(68,136,255,0.25); }
+  .section-label { color: #4488ff; }
+  .back-link { color: #4488ff; }
+  .overview-card h3 { color: #4488ff; }
+  .case-card h2, .outcome-banner h2 {
+    background: linear-gradient(135deg, #4488ff, #3366cc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .bit-toggle { color: #4488ff; border-color: rgba(68,136,255,0.25); }
+  .bit-toggle.active { background: linear-gradient(135deg, #4488ff, #3366cc); border-color: transparent; }
+  .project-kicker { color: #000000; }
+  .section-label { color: #000000; }
+  .tools-cloud span { color: #4488ff; border-color: rgba(68,136,255,0.18); }
+  .tools-cloud span:hover { border-color: rgba(68,136,255,0.40); background: rgba(68,136,255,0.06); }
+  .tools-cloud span.active { background: rgba(68,136,255,0.15); border-color: rgba(68,136,255,0.55); box-shadow: 0 0 16px rgba(68,136,255,0.12); color: #2d2942; }
+  .timeline-item { border-left-color: rgba(68,136,255,0.35); }
+  .code-dot { background: rgba(68,136,255,0.2); }
+  .code-dot.active { background: #4488ff; }
+  .code-slide { border-color: rgba(68,136,255,0.12); }
+  .outcome-banner { border-color: rgba(68,136,255,0.18); }
+  .highlight-box { border-color: rgba(68,136,255,0.16); }
+  .project-cover-placeholder {
+    background:
+      linear-gradient(135deg, rgba(255,255,255,0.7), rgba(68,136,255,0.10)),
+      radial-gradient(circle at top right, rgba(68,136,255,0.20), transparent 35%),
+      radial-gradient(circle at bottom left, rgba(68,136,255,0.12), transparent 35%);
+  }
+  .seg { background: #d4e4f8; }
+  .seg.on { background: #4488ff; }
+  .stage-carry span { color: #4488ff; }
+  .stage-out span { color: #4488ff; }
+  .gate-btn.active { border-color: rgba(68,136,255,0.3); }
+  .gate-box { background: linear-gradient(135deg, #4488ff, #3366cc); }
+  .gate-truth-table .tt-cell.highlight { background: #d4e4ff; }
+  .kmap-cell:hover { background: #d4e4ff; }
+  .kmap-cell.val-1 { color: #4488ff; }
+</style>
+  </head>
+  <body class="project-page">
+    <div class="ambient-voltage" id="ambientVoltage"></div>
+    <div class="lightbox" id="lightbox">
+      <span class="lightbox-close" id="lightboxClose">×</span>
+      <img
+        class="lightbox-content"
+        id="lightboxImg"
+        alt="Expanded project image"
+      />
+    </div>
+    <!-- <div class="site-decor" aria-hidden="true">    <span class="grid-overlay"></span>    <span class="decor-orb orb-1"></span>    <span class="decor-orb orb-2"></span>    <span class="decor-orb orb-3"></span>    <span class="schematic-sticker sticker-resistor"></span>    <span class="schematic-sticker sticker-capacitor"></span>    <span class="schematic-sticker sticker-wave"></span>    <span class="schematic-sticker sticker-chip"></span>
+</div> -->
+    <div class="easter-eggs" aria-hidden="true">
+      <span class="ee-schematic ee-resistor"></span>
+      <span class="ee-schematic ee-capacitor"></span>
+      <span class="ee-schematic ee-wave"></span>
+      <span class="ee-schematic ee-chip"></span>
+      <span class="ee-schematic ee-inductor"></span>
+      <span class="ee-schematic ee-diode"></span>
+      <span class="ee-schematic ee-opamp"></span>
+      <span class="ee-text ee-binary-1">HDL • K-Maps • Bool</span>
+      <span class="ee-text ee-binary-2">Logic • LED • NAND</span>
+      <span class="ee-text ee-data-1">10101101</span>
+      <span class="ee-text ee-data-2">CLK • DATA • GND</span>
+      <span class="ee-text ee-data-3">R = 220Ω</span>
+      <span class="ee-spark ee-spark-1"></span>
+      <span class="ee-spark ee-spark-2"></span>
+      <span class="ee-spark ee-spark-3"></span>
+    </div>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="#home" class="logo">
+          <img src="images/name.png" alt="Zunairah Hasan" class="logo-name" />
+        </a>
+<nav class="nav">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="projects.html" class="active-link">Projects</a>
+  <a href="contact.html">Contact</a>
+</nav>
+<button class="menu-btn" id="menuBtn" aria-label="Open menu">
+  <span></span><span></span><span></span>
+</button>
+</div>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="projects.html">Projects</a>
+  <a href="contact.html">Contact</a>
+</div>
+    </header>
+    <main>
+      <section class="project-hero" id="home">
+        <div class="container">
+          <a class="back-link" href="projects.html">← Back to Projects</a>
+          <div class="project-hero-grid">
+            <div>
+              <p class="project-kicker">2DI4</p>
+              <h1>Digital Logic Design</h1>
+              <p>
+                This course strengthened my understanding of digital systems by
+                connecting theoretical logic design to real implementation. I
+                worked through combinational logic, arithmetic circuits, HDL,
+                and sequential systems, validating ideas through hardware
+                testing and circuit behavior.
+              </p>
+              <div class="project-meta">
+                <span>Truth Tables</span> <span>K-Maps</span> <span>HDL</span>
+                <span>Adders</span> <span>Registers</span>
+              </div>
+            </div>
+            <div class="project-panel">
+              <h3>Project snapshot</h3>
+              <p>
+                The course moved from basic gate logic and simplification into
+                more advanced digital design topics including multiplexers, full
+                adders, HDL decoder implementation, and sequential behavior with
+                counters and registers.
+              </p>
+            </div>
+          </div>
+          <div class="project-cover">
+            <div class="project-cover-placeholder">
+              <div>
+                <img
+                  src="images/2di4-cover.png"
+                  alt="2DI4 project visual"
+                  class="lightbox-image"
+                />
+                <p>
+                  <!-- Good options: the MacAEV photo, ROS / rviz screenshot, mapping output,                localization figure, or autonomous driving setup. -->
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="project-layout" id="about">
+        <div class="container project-sections">
+          <div class="overview-grid" id="overview">
+            <div class="overview-card">
+              <h3>Course focus</h3>
+              <p>
+                Digital logic design, simplification, implementation, and
+                verification.
+              </p>
+            </div>
+            <div class="overview-card">
+              <h3>My role</h3>
+              <p>
+                Designed, built, tested, and verified logic systems across both
+                hardware and HDL work.
+              </p>
+            </div>
+            <div class="overview-card">
+              <h3>Main challenge</h3>
+              <p>
+                Turning abstract Boolean logic into real circuit behavior and
+                validating each stage carefully.
+              </p>
+            </div>
+            <div class="overview-card">
+              <h3>Final outcome</h3>
+              <p>
+                A much stronger understanding of how logic becomes functioning
+                digital hardware.
+              </p>
+            </div>
+          </div>
+          <div class="case-card">
+            <span class="section-label">Progression</span>
+            <h2>From basic logic to sequential systems</h2>
+            <div class="timeline">
+              <div class="timeline-item">
+                <h3>Foundations</h3>
+                <p>
+                  Started with logic gates, equivalence, truth tables, and
+                  NAND/NOR reasoning.
+                </p>
+              </div>
+              <div class="timeline-item">
+                <h3>Combinational design</h3>
+                <p>
+                  Worked through Karnaugh maps, multiplexers, decoders, and
+                  arithmetic logic circuits.
+                </p>
+              </div>
+              <div class="timeline-item">
+                <h3>HDL implementation</h3>
+                <p>
+                  Applied digital design concepts through HDL-based logic and
+                  decoder work.
+                </p>
+              </div>
+              <div class="timeline-item">
+                <h3>Sequential systems</h3>
+                <p>
+                  Explored registers, counters, EEPROM-style behavior, and
+                  timing-driven digital output.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="image-gallery">
+            <div class="gallery-card">
+              <!-- <div class="gallery-placeholder">Add adder / combinational circuit image here</div> -->
+              <img
+                class="gallery-image"
+                src="images/arithmetic.png"
+                alt="Add adder / combinational circuit image here"
+              />
+              <div class="gallery-caption">
+                <h3>Arithmetic circuits</h3>
+                <!-- <p>Use a photo or screenshot showing half/full adder or 4-bit arithmetic work.</p> -->
+              </div>
+            </div>
+            <div class="gallery-card">
+              <!-- <div class="gallery-placeholder">Add HDL / decoder / register image here</div> -->
+              <img
+                class="gallery-image"
+                src="images/HDL.png"
+                alt="Add HDL / decoder / register image here"
+              />
+              <div class="gallery-caption">
+                <h3>HDL & sequential design</h3>
+                <!-- <p>Use a decoder screenshot, HDL view, or register/counter test photo.</p> -->
+              </div>
+            </div>
+          </div>
+          <div class="split-case-grid">
+            <div class="case-card">
+              <span class="section-label">Key Areas</span>
+              <h2>What I built</h2>
+              <ul>
+                <li>Truth table and logic gate analysis</li>
+                <li>Karnaugh map simplification</li>
+                <li>Multiplexer and decoder logic</li>
+                <li>Half adder and full adder circuits</li>
+                <li>4-bit add/subtract design</li>
+                <li>HDL logic modules</li>
+                <li>Registers, counters, and EEPROM outputs</li>
+              </ul>
+            </div>
+            <div class="case-card">
+              <span class="section-label">Technical Growth</span>
+              <h2>What improved most</h2>
+              <p>
+                This course improved how I think about systems structurally. I
+                became more comfortable moving from simplified Boolean logic to
+                full implementations, and more confident in validating designs
+                through observed circuit behavior.
+              </p>
+            </div>
+          </div>
+          <div class="case-card">
+            <span class="section-label">Interactive Tool</span>
+            <h2>7-Segment Display Simulator</h2>
+            <p>Toggle the four input bits to see the corresponding digit on the 7-segment display.</p>
+            <div class="seven-seg-layout">
+              <div class="seven-seg-display" id="sevenSegDisplay">
+                <div class="seg seg-a" id="segA"></div>
+                <div class="seg seg-b" id="segB"></div>
+                <div class="seg seg-c" id="segC"></div>
+                <div class="seg seg-d" id="segD"></div>
+                <div class="seg seg-e" id="segE"></div>
+                <div class="seg seg-f" id="segF"></div>
+                <div class="seg seg-g" id="segG"></div>
+              </div>
+              <div class="seven-seg-inputs" id="sevenSegInputs">
+                <button class="bit-toggle active" data-bit="3">1</button>
+                <button class="bit-toggle active" data-bit="2">1</button>
+                <button class="bit-toggle active" data-bit="1">1</button>
+                <button class="bit-toggle active" data-bit="0">1</button>
+              </div>
+            </div>
+            <div class="seven-seg-info">
+              <span>Binary: <strong id="segBinary">1111</strong></span>
+              <span>Decimal: <strong id="segDecimal">15</strong></span>
+              <span>Hex: <strong id="segHex">F</strong></span>
+              <span>Segments: <strong id="segLit">a, b, c, d, e, f</strong></span>
+            </div>
+          </div>
+          <div class="case-card">
+            <span class="section-label">Interactive Tool</span>
+            <h2>4-Bit Binary Adder</h2>
+            <p>Toggle the bits of A, B, and carry-in to see the ripple-carry adder compute the sum.</p>
+            <div class="adder-container">
+              <div class="adder-inputs">
+                <div class="adder-row">
+                  <span class="adder-label">A</span>
+                  <button class="bit-toggle" data-adder="a" data-bit="3">0</button>
+                  <button class="bit-toggle" data-adder="a" data-bit="2">0</button>
+                  <button class="bit-toggle" data-adder="a" data-bit="1">0</button>
+                  <button class="bit-toggle" data-adder="a" data-bit="0">0</button>
+                </div>
+                <div class="adder-row">
+                  <span class="adder-label">B</span>
+                  <button class="bit-toggle" data-adder="b" data-bit="3">0</button>
+                  <button class="bit-toggle" data-adder="b" data-bit="2">0</button>
+                  <button class="bit-toggle" data-adder="b" data-bit="1">0</button>
+                  <button class="bit-toggle" data-adder="b" data-bit="0">0</button>
+                </div>
+                <div class="adder-row">
+                  <span class="adder-label">Cin</span>
+                  <button class="bit-toggle" data-adder="cin" data-bit="0" style="margin-left:0">0</button>
+                </div>
+              </div>
+              <div class="adder-stages" id="adderStages">
+                <div class="adder-stage">
+                  <div class="stage-pair"><span class="stage-bit" id="sA0">0</span><span class="stage-plus">+</span><span class="stage-bit" id="sB0">0</span></div>
+                  <div class="stage-carry">Cin=<span id="sC0">0</span></div>
+                  <div class="stage-arrow">→</div>
+                  <div class="stage-out">S<sub>0</sub>=<span id="sS0">0</span>  C<sub>1</sub>=<span id="dC1">0</span></div>
+                </div>
+                <div class="adder-connector">→</div>
+                <div class="adder-stage">
+                  <div class="stage-pair"><span class="stage-bit" id="sA1">0</span><span class="stage-plus">+</span><span class="stage-bit" id="sB1">0</span></div>
+                  <div class="stage-carry">C<sub>1</sub>=<span id="sC1">0</span></div>
+                  <div class="stage-arrow">→</div>
+                  <div class="stage-out">S<sub>1</sub>=<span id="sS1">0</span>  C<sub>2</sub>=<span id="dC2">0</span></div>
+                </div>
+                <div class="adder-connector">→</div>
+                <div class="adder-stage">
+                  <div class="stage-pair"><span class="stage-bit" id="sA2">0</span><span class="stage-plus">+</span><span class="stage-bit" id="sB2">0</span></div>
+                  <div class="stage-carry">C<sub>2</sub>=<span id="sC2">0</span></div>
+                  <div class="stage-arrow">→</div>
+                  <div class="stage-out">S<sub>2</sub>=<span id="sS2">0</span>  C<sub>3</sub>=<span id="dC3">0</span></div>
+                </div>
+                <div class="adder-connector">→</div>
+                <div class="adder-stage">
+                  <div class="stage-pair"><span class="stage-bit" id="sA3">0</span><span class="stage-plus">+</span><span class="stage-bit" id="sB3">0</span></div>
+                  <div class="stage-carry">C<sub>3</sub>=<span id="sC3">0</span></div>
+                  <div class="stage-arrow">→</div>
+                  <div class="stage-out">S<sub>3</sub>=<span id="sS3">0</span>  C<sub>4</sub>=<span id="sC4">0</span></div>
+                </div>
+              </div>
+              <div class="adder-result">
+                <span>Sum: <strong id="adderBinary">0000</strong><sub>2</sub></span>
+                <span>= <strong id="adderDecimal">0</strong><sub>10</sub></span>
+                <span>Carry out: <strong id="adderCarry">0</strong></span>
+              </div>
+            </div>
+          </div>
+          <div class="case-card">
+            <span class="section-label">Interactive Tool</span>
+            <h2>Logic Gate Explorer</h2>
+            <p>Toggle inputs A and B, then click a gate to see how the output changes.</p>
+            <div class="gate-selector" id="gateSelector">
+              <button class="gate-btn active" data-gate="and">AND</button>
+              <button class="gate-btn" data-gate="or">OR</button>
+              <button class="gate-btn" data-gate="nand">NAND</button>
+              <button class="gate-btn" data-gate="nor">NOR</button>
+              <button class="gate-btn" data-gate="xor">XOR</button>
+              <button class="gate-btn" data-gate="xnor">XNOR</button>
+            </div>
+            <div class="gate-visual">
+              <div class="gate-input-col">
+                <div class="gate-input-row">
+                  <span class="gate-input-label">A</span>
+                  <button class="bit-toggle gate-input-btn active" id="gateA">1</button>
+                  <span class="gate-line" id="gateLineA"></span>
+                </div>
+                <div class="gate-input-row">
+                  <span class="gate-input-label">B</span>
+                  <button class="bit-toggle gate-input-btn active" id="gateB">1</button>
+                  <span class="gate-line" id="gateLineB"></span>
+                </div>
+              </div>
+              <div class="gate-box" id="gateBox">AND</div>
+              <div class="gate-output-col">
+                <span class="gate-line" id="gateLineOut"></span>
+                <span class="gate-output-label">Out: <strong id="gateOutput">1</strong></span>
+              </div>
+            </div>
+            <div class="gate-truth-wrap">
+              <div class="gate-truth-table" id="gateTruthTable"></div>
+            </div>
+          </div>
+          <div class="case-card">
+            <span class="section-label">Interactive Tool</span>
+            <h2>Karnaugh Map Solver</h2>
+            <p>Click cells to toggle 0/1. The minimized Boolean expression updates automatically.</p>
+            <div class="kmap-mode-selector" id="kmapModeSelector">
+              <button class="gate-btn active" data-kmap="2">2 Variables</button>
+              <button class="gate-btn" data-kmap="3">3 Variables</button>
+            </div>
+            <div class="kmap-container">
+              <div class="kmap-grid" id="kmapGrid"></div>
+              <div class="kmap-expression">
+                <div>Minimized: <strong id="kmapMinimized">0</strong></div>
+                <div>Canonical: <span id="kmapCanonical">0</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="case-card">
+            <span class="section-label">Tools Used</span>
+            <h2>Technical stack</h2>
+            <div class="tools-cloud">
+              <span>Boolean Algebra</span> <span>Karnaugh Maps</span>
+              <span>HDL</span> <span>Decoders</span> <span>Adders</span>
+              <span>Breadboarding</span> <span>LED Testing</span>
+            </div>
+          </div>
+          <div class="outcome-banner">
+            <h2>Outcome</h2>
+            <p>
+              This course shows how I work through engineering systems in a
+              grounded, test-based way: understand the logic, build the design,
+              validate the behavior, and refine the implementation until the
+              physical output matches the theory.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+    <script src="2di4-interactive.js"></script>
+  </body>
+</html>

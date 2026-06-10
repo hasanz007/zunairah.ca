@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cyberdeck | Personal Build Project</title>
+    <meta
+      name="description"
+      content="Concept portfolio page for a custom cyberdeck personal project featuring portable computing, modular hardware, embedded electronics, and industrial cyberpunk design."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+<style>
+  .project-hero h1 {
+    background: linear-gradient(135deg, #6ebeff, #5599cc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .project-kicker { color: #6ebeff; }
+  .project-kicker::before { background: #6ebeff; }
+  .project-meta span { border-color: rgba(110,190,255,0.25); }
+  .section-label { color: #6ebeff; }
+  .back-link { color: #6ebeff; }
+  .overview-card h3 { color: #6ebeff; }
+  .case-card h2, .outcome-banner h2 {
+    background: linear-gradient(135deg, #6ebeff, #5599cc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .project-kicker { color: #000000; }
+  .section-label { color: #000000; }
+  .tools-cloud span { color: #6ebeff; border-color: rgba(110,190,255,0.18); }
+  .tools-cloud span:hover { border-color: rgba(110,190,255,0.40); background: rgba(110,190,255,0.06); }
+  .tools-cloud span.active { background: rgba(110,190,255,0.15); border-color: rgba(110,190,255,0.55); box-shadow: 0 0 16px rgba(110,190,255,0.12); color: #2d2942; }
+  .timeline-item { border-left-color: rgba(110,190,255,0.35); }
+  .code-dot { background: rgba(110,190,255,0.2); }
+  .code-dot.active { background: #6ebeff; }
+  .code-slide { border-color: rgba(110,190,255,0.12); }
+  .outcome-banner { border-color: rgba(110,190,255,0.18); }
+  .highlight-box { border-color: rgba(110,190,255,0.16); }
+  .project-cover-placeholder {
+    background:
+      linear-gradient(135deg, rgba(255,255,255,0.7), rgba(110,190,255,0.10)),
+      radial-gradient(circle at top right, rgba(110,190,255,0.20), transparent 35%),
+      radial-gradient(circle at bottom left, rgba(110,190,255,0.12), transparent 35%);
+  }
+</style>
+  </head>
+  <body class="project-page">
+    <div class="ambient-voltage" id="ambientVoltage"></div>
+    <div class="lightbox" id="lightbox">
+      <span class="lightbox-close" id="lightboxClose">×</span>
+      <img
+        class="lightbox-content"
+        id="lightboxImg"
+        alt="Expanded project image"
+      />
+    </div>
+    <div class="easter-eggs" aria-hidden="true">
+      <span class="ee-schematic ee-resistor"></span>
+      <span class="ee-schematic ee-capacitor"></span>
+      <span class="ee-schematic ee-wave"></span>
+      <span class="ee-schematic ee-chip"></span>
+      <span class="ee-schematic ee-inductor"></span>
+      <span class="ee-schematic ee-diode"></span>
+      <span class="ee-schematic ee-opamp"></span>
+      <span class="ee-text ee-binary-1">Portable • Modular • Off-Grid</span>
+      <span class="ee-text ee-binary-2">Display • Input • Power • IO</span>
+      <span class="ee-text ee-data-1">10101101</span>
+      <span class="ee-text ee-data-2">CLK • DATA • GND</span>
+      <span class="ee-text ee-data-3">R = 220Ω</span>
+      <span class="ee-spark ee-spark-1"></span>
+      <span class="ee-spark ee-spark-2"></span>
+      <span class="ee-spark ee-spark-3"></span>
+    </div>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="index.html#home" class="logo">
+          <img src="images/name.png" alt="Zunairah Hasan" class="logo-name" />
+        </a>
+<nav class="nav">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="projects.html" class="active-link">Projects</a>
+  <a href="contact.html">Contact</a>
+</nav>
+<button class="menu-btn" id="menuBtn" aria-label="Open menu">
+  <span></span><span></span><span></span>
+</button>
+</div>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="projects.html">Projects</a>
+  <a href="contact.html">Contact</a>
+</div>
+    </header>
+    <main>
+      <section class="project-hero" id="home">
+        <div class="container">
+          <a class="back-link" href="projects.html">← Back to Projects</a>
+          <div class="project-hero-grid">
+            <div>
+              <p class="project-kicker">Personal Project Concept</p>
+              <h1>Custom Cyberdeck Build</h1>
+              <p>
+                A concept project for building a portable custom computer
+                inspired by cyberdeck maker builds, combining compact computing
+                hardware, battery power, modular IO, and a rugged
+                cyberpunk-inspired enclosure.
+              </p>
+              <div class="project-meta">
+                <span>Portable Computing</span> <span>Embedded Hardware</span>
+                <span>Battery Power</span> <span>Custom Enclosure</span>
+                <span>Modular IO</span> <span>Cyberpunk Design</span>
+              </div>
+            </div>
+            <div class="project-panel">
+              <h3>Project snapshot</h3>
+              <p>
+                This is a forward-looking personal build centered on the idea of
+                creating a self-contained cyberdeck: a portable DIY computer
+                with its own display, input system, onboard power, and expansion
+                options. The goal is to blend engineering function with a strong
+                visual identity and a highly customized form factor.
+              </p>
+            </div>
+          </div>
+          <div class="project-cover">
+            <div class="project-cover-placeholder">
+              <div>
+                <img
+                  src="images/cyberdeck-cover.png"
+                  alt="Cyberdeck concept render or build photo"
+                  class="lightbox-image"
+                />
+                <p>
+                  Placeholder for a concept render, inspiration collage, CAD
+                  mockup, or final build photo.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="project-layout">
+        <div class="container project-sections">
+          <div class="overview-grid">
+            <div class="overview-card">
+              <h3>Focus</h3>
+              <p>
+                Designing a portable computer system that is functional,
+                modular, and visually distinct.
+              </p>
+            </div>
+            <div class="overview-card">
+              <h3>Core Build</h3>
+              <p>
+                Single-board computer, display, keyboard, battery system,
+                cooling, storage, and ports.
+              </p>
+            </div>
+            <div class="overview-card">
+              <h3>Potential Stack</h3>
+              <p>
+                Raspberry Pi or mini PC, Linux, custom wiring, 3D printed or
+                fabricated enclosure.
+              </p>
+            </div>
+            <div class="overview-card">
+              <h3>Outcome</h3>
+              <p>
+                A portable custom machine that feels part engineering project,
+                part product design exercise.
+              </p>
+            </div>
+          </div>
+          <div class="case-card">
+            <span class="section-label">Overview</span>
+            <h2>What a cyberdeck is</h2>
+            <p>
+              Cyberdecks are generally understood in maker culture as highly
+              customized portable computers inspired by cyberpunk fiction.
+              Modern builds often mix compact computing hardware, custom cases,
+              displays, keyboards, exposed wiring, antennas, and rugged styling.
+            </p>
+            <p>
+              This project page is structured as a template for a future build,
+              so the content focuses on the intended direction, hardware
+              planning, design goals, and the kind of engineering decisions the
+              final project could involve.
+            </p>
+          </div>
+          <div class="split-case-grid">
+            <div class="case-card">
+              <span class="section-label">Project intent</span>
+              <h2>What I want to build</h2>
+              <p>
+                I want this project to become a custom portable workstation that
+                feels more intentional and specialized than a standard laptop.
+                The idea is to create something self-contained and unique, with
+                a purpose-built enclosure, visible hardware character, and a
+                layout designed around how I actually want to use it.
+              </p>
+              <ul>
+                <li>Portable screen and keyboard in one integrated body</li>
+                <li>Onboard power for standalone use</li>
+                <li>Useful external IO and expansion access</li>
+                <li>
+                  Mechanical and visual design that feels rugged and custom
+                </li>
+                <li>Enough modularity to revise the system over time</li>
+              </ul>
+            </div>
+            <div class="case-card">
+              <span class="section-label">Why it matters</span>
+              <h2>Why this project is interesting</h2>
+              <p>
+                A cyberdeck is not just one component purchase or one coding
+                task. It combines product thinking, enclosure design, hardware
+                integration, power planning, interface decisions, and visual
+                storytelling.
+              </p>
+              <p>
+                That makes it a strong personal project because it sits at the
+                intersection of engineering, UX, fabrication, and system-level
+                design.
+              </p>
+            </div>
+          </div>
+          <div class="case-card">
+            <span class="section-label">Build planning</span>
+            <h2>Main system areas</h2>
+            <div class="tools-cloud">
+              <span>Single-Board Computer</span>
+              <span>Display Integration</span> <span>Keyboard Layout</span>
+              <span>Battery + Charging</span> <span>Power Regulation</span>
+              <span>Thermal Management</span>
+              <span>USB / HDMI / GPIO Access</span> <span>Storage</span>
+              <span>Case Design</span> <span>3D Printing or Fabrication</span>
+              <span>Linux Setup</span> <span>Modular Expansion</span>
+            </div>
+          </div>
+          <div class="case-card">
+            <span class="section-label">Possible approach</span>
+            <h2>How the build could progress</h2>
+            <div class="timeline">
+              <div class="timeline-item">
+                <h3>1. Concept and references</h3>
+                <p>
+                  Start by locking in the overall direction: rugged field
+                  device, retro terminal, compact workstation, or a more
+                  tactical cyberpunk form factor.
+                </p>
+              </div>
+              <div class="timeline-item">
+                <h3>2. Hardware selection</h3>
+                <p>
+                  Choose the main compute platform, display size, keyboard,
+                  battery setup, storage, and any special modules like antennas,
+                  radios, sensors, or external controls.
+                </p>
+              </div>
+              <div class="timeline-item">
+                <h3>3. Layout planning</h3>
+                <p>
+                  Map where each component sits, how the internal wiring routes,
+                  which ports stay externally accessible, and how the lid,
+                  hinge, or structural shell should open and close.
+                </p>
+              </div>
+              <div class="timeline-item">
+                <h3>4. Enclosure prototyping</h3>
+                <p>
+                  Build the body through 3D printing, acrylic, aluminum, wood,
+                  or a hybrid material approach, then revise around fit,
+                  strength, and visual style.
+                </p>
+              </div>
+              <div class="timeline-item">
+                <h3>5. Integration and testing</h3>
+                <p>
+                  Assemble the system, validate thermals and power behavior,
+                  test portability, and refine cable management, controls, and
+                  user interaction.
+                </p>
+              </div>
+              <div class="timeline-item">
+                <h3>6. Final detailing</h3>
+                <p>
+                  Finish the build with labels, lighting, texture, fasteners,
+                  interface cues, and any aesthetic touches that make the device
+                  feel complete and intentional.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="highlight-grid">
+            <div class="highlight-box">
+              <h3>System integration</h3>
+              <p>
+                The project would require electrical, mechanical, and software
+                decisions to work together inside one compact build.
+              </p>
+            </div>
+            <div class="highlight-box">
+              <h3>Design identity</h3>
+              <p>
+                A strong part of the appeal is giving the machine a clear
+                aesthetic language instead of making it look generic.
+              </p>
+            </div>
+            <div class="highlight-box">
+              <h3>Iterative prototyping</h3>
+              <p>
+                This kind of project naturally benefits from multiple revisions
+                as the layout, usability, and durability improve.
+              </p>
+            </div>
+          </div>
+          <div class="split-case-grid">
+            <div class="case-card">
+              <span class="section-label">Hardware detail</span>
+              <h2>Potential internal components</h2>
+              <p>
+                Many modern cyberdeck builds are based around a Raspberry Pi or
+                other compact computer, usually paired with a small display,
+                integrated keyboard, battery pack, storage, and custom wiring.
+              </p>
+              <p>
+                For this project, the final hardware could range from a
+                lightweight Pi-based setup to a more powerful mini-PC build,
+                depending on whether the goal leans more portable, more
+                powerful, or more experimental.
+              </p>
+            </div>
+            <div class="case-card">
+              <span class="section-label">Design detail</span>
+              <h2>Form factor and usability</h2>
+              <p>
+                One of the most important choices will be deciding how the
+                cyberdeck is actually meant to be used: on a desk, on the move,
+                while standing, or as a compact field device.
+              </p>
+              <p>
+                That decision affects keyboard style, screen angle, handle
+                placement, port access, hinge design, and overall ergonomics.
+              </p>
+            </div>
+          </div>
+          <div class="case-card">
+            <span class="section-label">Potential features</span>
+            <h2>Ideas worth exploring</h2>
+            <div class="tools-cloud">
+              <span>Mechanical Keyboard</span> <span>OLED Status Panel</span>
+              <span>External Antenna</span> <span>Folding Display</span>
+              <span>Battery Indicator</span> <span>Custom Power Switch</span>
+              <span>Panel-Mount USB</span> <span>GPIO Breakout</span>
+              <span>Cooling Fan</span> <span>Handle or Carry Strap</span>
+              <span>Custom Labels</span> <span>Accent Lighting</span>
+            </div>
+          </div>
+          <div class="case-card">
+            <span class="section-label">Visuals</span>
+            <h2>Gallery</h2>
+            <div class="image-gallery">
+              <div class="gallery-card">
+                <div class="gallery-placeholder">Concept sketch or CAD</div>
+                <div class="gallery-caption">
+                  <h3>Early design direction</h3>
+                  <p>
+                    Use a sketch, render, or CAD screenshot to show the first
+                    idea for the layout and shell.
+                  </p>
+                </div>
+              </div>
+              <div class="gallery-card">
+                <div class="gallery-placeholder">Hardware spread</div>
+                <div class="gallery-caption">
+                  <h3>Component planning</h3>
+                  <p>
+                    Show the selected parts before assembly to highlight the
+                    system architecture.
+                  </p>
+                </div>
+              </div>
+              <div class="gallery-card">
+                <div class="gallery-placeholder">Prototype shell</div>
+                <div class="gallery-caption">
+                  <h3>Enclosure development</h3>
+                  <p>
+                    Document 3D prints, fabrication tests, or structural
+                    revisions as the body evolves.
+                  </p>
+                </div>
+              </div>
+              <div class="gallery-card">
+                <div class="gallery-placeholder">Final assembled build</div>
+                <div class="gallery-caption">
+                  <h3>Finished cyberdeck</h3>
+                  <p>
+                    Use the final hero photo here once the build is complete and
+                    fully documented.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="outcome-banner">
+            <h2>Key takeaway</h2>
+            <p>
+              Even as a concept page, this project highlights the kind of work a
+              cyberdeck build involves: system planning, physical prototyping,
+              hardware integration, interface design, and a strong point of view
+              on form. Once built, it could become one of the most distinctive
+              personal projects in the portfolio.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>© <span id="year"></span> Zunairah Hasan</p>
+        <p>Built with HTML, CSS, and JavaScript</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

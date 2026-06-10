@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | Zunairah Hasan</title>
+    <meta
+      name="description"
+      content="About Zunairah Hasan — electrical engineering student, digital systems, C/C++ programming, and embedded systems."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div id="bootScreen" class="boot-screen" aria-hidden="true">
+      <div class="boot-terminal">
+        <div class="boot-header">ZUN-SYSTEM v2.0 — POST SEQUENCE</div>
+        <div class="boot-output" id="bootOutput"></div>
+        <div class="boot-progress-wrap">
+          <div class="boot-progress-bar" id="bootProgress"></div>
+        </div>
+        <div class="boot-status" id="bootStatus">Initializing...</div>
+      </div>
+    </div>
+    <div class="easter-eggs" aria-hidden="true">
+      <span class="ee-schematic ee-resistor"></span>
+      <span class="ee-schematic ee-capacitor"></span>
+      <span class="ee-schematic ee-wave"></span>
+      <span class="ee-schematic ee-chip"></span>
+      <span class="ee-schematic ee-inductor"></span>
+      <span class="ee-schematic ee-diode"></span>
+      <span class="ee-schematic ee-opamp"></span>
+      <span class="ee-text ee-binary-1">1011 0010</span>
+      <span class="ee-text ee-binary-2">V = IR</span>
+      <span class="ee-text ee-data-1">10101101</span>
+      <span class="ee-text ee-data-2">CLK • DATA • GND</span>
+      <span class="ee-text ee-data-3">R = 220Ω</span>
+      <span class="ee-spark ee-spark-1"></span>
+      <span class="ee-spark ee-spark-2"></span>
+      <span class="ee-spark ee-spark-3"></span>
+    </div>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="index.html#home" class="logo">
+          <img src="images/name.png" alt="Zunairah Hasan" class="logo-name" />
+        </a>
+        <nav class="nav">
+          <a href="index.html">Home</a>
+          <a href="about.html" class="active-link">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </header>
+    <main>
+      <section class="about-page section" id="about">
+        <div class="container">
+          <div class="about-page-header">
+            <h1>Engineer mindset, creative presentation</h1>
+            <p class="about-page-sub">
+              An electrical engineering student who enjoys turning technical
+              ideas into clear, testable, working solutions.
+            </p>
+          </div>
+
+          <div class="about-page-body">
+
+            <!-- Row 1: Bio + Portrait -->
+            <div class="about-grid-2">
+              <div class="about-page-card">
+                <h2>Who I am</h2>
+                <p>
+                  I'm an electrical engineering student with a growing interest in
+                  designing systems that are both technically strong and clearly
+                  communicated. I like combining analysis, testing, coding, and
+                  visual presentation so my work is understandable as well as
+                  functional.
+                </p>
+
+              </div>
+              <div class="about-portrait-card">
+                <img
+                  src="images/Zunairah.jpg"
+                  alt="Portrait of Zunairah Hasan"
+                  class="about-portrait-img"
+                />
+              </div>
+            </div>
+
+            <!-- Row 2: Skills & Tools -->
+            <div class="about-page-card">
+              <h2>What I work with</h2>
+              <p>
+                Languages, platforms, and tools I use across my coursework and
+                personal projects.
+              </p>
+              <div class="tools-cloud">
+                <span>C/C++</span>
+                <span>Digital Logic</span>
+                <span>Embedded Systems</span>
+                <span>Python</span>
+                <span>MATLAB</span>
+                <span>PCB Design</span>
+                <span>ROS</span>
+                <span>UART / I2C / SPI</span>
+                <span>Git</span>
+                <span>Linux</span>
+                <span>SystemVerilog</span>
+                <span>Assembly</span>
+              </div>
+            </div>
+
+            <!-- Row 3: Education Timeline -->
+            <div class="about-page-card">
+              <h2>Education</h2>
+              <p>
+                Bachelor of Engineering in Electrical Engineering at McMaster
+                University — co-op program with hands-on lab and project
+                experience.
+              </p>
+              <div class="about-timeline">
+                <div class="about-timeline-bar">
+                  <span class="about-timeline-dot" data-year="2022"></span>
+                  <span class="about-timeline-line"></span>
+                  <span class="about-timeline-dot" data-year="2025"></span>
+                  <span class="about-timeline-line"></span>
+                  <span class="about-timeline-dot" data-year="2027"></span>
+                </div>
+                <div class="about-timeline-courses">
+                  <div class="about-timeline-item">
+                    <span class="about-timeline-code">1st &amp; 2nd Year</span>
+                    <span>Foundations in circuits, programming, and math</span>
+                  </div>
+                  <div class="about-timeline-item">
+                    <span class="about-timeline-code">3rd &amp; 4th Year</span>
+                    <span>Digital logic, embedded systems, microprocessor design</span>
+                  </div>
+                  <div class="about-timeline-item">
+                    <span class="about-timeline-code">5th Year</span>
+                    <span>Capstone, systems integration, advanced topics</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Row 4: Interests + Connect -->
+            <div class="about-grid-2">
+              <div class="about-page-card">
+                <h2>Other interests</h2>
+                <p>
+                  When I'm not working on coursework, I enjoy building custom
+                  PCs, tinkering with circuits, designing intuitive UI/UX
+                  interfaces, and exploring creative tech projects that blend
+                  engineering with visual design.
+                </p>
+              </div>
+              <div class="about-page-card about-connect-card">
+                <h2>Let's talk</h2>
+                <p>
+                  Open to connecting about coursework, projects, and engineering
+                  opportunities.
+                </p>
+                <a href="resume.pdf" class="btn btn-primary" target="_blank">
+                  Download Resume
+                </a>
+                <div class="about-connect-links">
+                  <a href="mailto:hasan.zbh@gmail.com">Email</a>
+                  <a
+                    href="https://www.linkedin.com/in/zunairahhasan/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >LinkedIn</a>
+                  <a
+                    href="https://github.com/hasanz007"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >GitHub</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Circuit chip (kept as-is) -->
+            <div
+              class="about-inline-circuit interactive-inline-chip"
+              aria-hidden="true"
+            >
+              <span class="circuit-hover-glow"></span>
+              <span class="circuit-node node-a"></span>
+              <span class="circuit-line line-a"></span>
+              <span class="circuit-chip"></span>
+              <span class="circuit-line line-b"></span>
+              <span class="circuit-node node-b"></span>
+              <span class="circuit-wave"></span>
+              <span class="circuit-pulse pulse-1"></span>
+              <span class="circuit-pulse pulse-2"></span>
+              <span class="circuit-label label-left">OUT</span>
+              <span class="circuit-label label-right">IN</span>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>&copy; <span id="year"></span> Zunairah Hasan</p>
+        <p>Built with HTML, CSS, and JavaScript</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+      lucide.createIcons();
+
+      document.querySelectorAll('.tools-cloud span').forEach(function(pill) {
+        pill.addEventListener('click', function() {
+          this.classList.toggle('active');
+        });
+      });
+    </script>
+  </body>
+</html>

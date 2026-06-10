@@ -1,0 +1,694 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2DX3 | Zunairah Hasan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"
+    />
+    `n
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    `n
+<style>
+  .project-hero h1 {
+    background: linear-gradient(135deg, #2ed573, #22aa5c);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .project-kicker { color: #2ed573; }
+  .project-kicker::before { background: #2ed573; }
+  .project-meta span { border-color: rgba(46,213,115,0.25); }
+  .section-label { color: #2ed573; }
+  .back-link { color: #2ed573; }
+  .overview-card h3 { color: #2ed573; }
+  .case-card h2, .outcome-banner h2 {
+    background: linear-gradient(135deg, #2ed573, #22aa5c);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .project-kicker { color: #000000; }
+  .section-label { color: #000000; }
+  .tools-cloud span { color: #2ed573; border-color: rgba(46,213,115,0.18); }
+  .tools-cloud span:hover { border-color: rgba(46,213,115,0.40); background: rgba(46,213,115,0.06); }
+  .tools-cloud span.active { background: rgba(46,213,115,0.15); border-color: rgba(46,213,115,0.55); box-shadow: 0 0 16px rgba(46,213,115,0.12); color: #2d2942; }
+  .timeline-item { border-left-color: rgba(46,213,115,0.35); }
+  .code-dot { background: rgba(46,213,115,0.2); }
+  .code-dot.active { background: #2ed573; }
+  .code-slide { border-color: rgba(46,213,115,0.12); }
+  .outcome-banner { border-color: rgba(46,213,115,0.18); }
+  .highlight-box { border-color: rgba(46,213,115,0.16); }
+  .project-cover-placeholder {
+    background:
+      linear-gradient(135deg, rgba(255,255,255,0.7), rgba(46,213,115,0.10)),
+      radial-gradient(circle at top right, rgba(46,213,115,0.20), transparent 35%),
+      radial-gradient(circle at bottom left, rgba(46,213,115,0.12), transparent 35%);
+  }
+  #scanCanvas { border-color: rgba(46,213,115,0.15); background: rgba(46,213,115,0.06); }
+  .scan-btn { border-color: rgba(46,213,115,0.25); }
+  .scan-btn:hover { background: rgba(46,213,115,0.12); border-color: rgba(46,213,115,0.4); }
+  .scan-btn.primary { background: #2ed573; border-color: #2ed573; }
+  .scan-btn.primary:hover { background: #22aa5c; }
+  .scan-room-select { border-color: rgba(46,213,115,0.25); }
+  .scan-readout-item { border-color: rgba(46,213,115,0.12); }
+  .scan-uart-wrap { background: rgba(46,213,115,0.06); border-color: rgba(46,213,115,0.12); }
+  #scanUartDisplay { color: #2ed573; }
+</style>
+  </head>
+  <body class="project-page">
+    <div class="ambient-voltage" id="ambientVoltage"></div>
+    <div class="lightbox" id="lightbox">
+      <span class="lightbox-close" id="lightboxClose">×</span>
+      <img
+        class="lightbox-content"
+        id="lightboxImg"
+        alt="Expanded project image"
+      />
+    </div>
+    <!-- <div class="site-decor" aria-hidden="true">    <span class="grid-overlay"></span>    <span class="decor-orb orb-1"></span>    <span class="decor-orb orb-2"></span>    <span class="decor-orb orb-3"></span>    <span class="schematic-sticker sticker-resistor"></span>    <span class="schematic-sticker sticker-capacitor"></span>    <span class="schematic-sticker sticker-wave"></span>    <span class="schematic-sticker sticker-chip"></span>
+</div> -->
+    <div class="easter-eggs" aria-hidden="true">
+      <span class="ee-schematic ee-resistor"></span>
+      <span class="ee-schematic ee-capacitor"></span>
+      <span class="ee-schematic ee-wave"></span>
+      <span class="ee-schematic ee-chip"></span>
+      <span class="ee-schematic ee-inductor"></span>
+      <span class="ee-schematic ee-diode"></span>
+      <span class="ee-schematic ee-opamp"></span>
+      <span class="ee-text ee-binary-1">UART • GPIO • ToF</span>
+      <span class="ee-text ee-binary-2">I2C • Mapping • Sensors</span>
+      <span class="ee-text ee-data-1">10101101</span>
+      <span class="ee-text ee-data-2">CLK • DATA • GND</span>
+      <span class="ee-text ee-data-3">R = 220Ω</span>
+      <span class="ee-spark ee-spark-1"></span>
+      <span class="ee-spark ee-spark-2"></span>
+      <span class="ee-spark ee-spark-3"></span>
+    </div>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="#home" class="logo">
+          <img src="images/name.png" alt="Zunairah Hasan" class="logo-name" />
+        </a>
+<nav class="nav">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="projects.html" class="active-link">Projects</a>
+  <a href="contact.html">Contact</a>
+</nav>
+<button class="menu-btn" id="menuBtn" aria-label="Open menu">
+  <span></span><span></span><span></span>
+</button>
+</div>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="projects.html">Projects</a>
+  <a href="contact.html">Contact</a>
+</div>
+    </header>
+    <main>
+      <section class="project-hero" id="home">
+        <div class="container">
+          <a class="back-link" href="projects.html">← Back to Projects</a>
+          <div class="project-hero-grid">
+            <div>
+              <p class="project-kicker">2DX3</p>
+              <h1>Indoor Mapping Embedded System</h1>
+              <p>
+                This project brought together sensing, control, embedded
+                programming, and visualization into one integrated system.
+                Across the course, I developed the skills needed to observe
+                signals, reason through timed control, and act through
+                interrupts and sensor-driven behavior, culminating in a low-cost
+                indoor mapping module.
+              </p>
+              <div class="project-meta">
+                <span>MSP432E401Y</span> <span>VL53L1X</span>
+                <span>Stepper Motor</span> <span>UART</span> <span>MATLAB</span>
+              </div>
+            </div>
+            <div class="project-panel">
+              <h3>Project summary</h3>
+              <p>
+                A Time-of-Flight sensor mounted to a stepper motor collected
+                distance data across a rotational scan. The microcontroller
+                packaged and transmitted the scan data over UART, while MATLAB
+                parsed the incoming values and reconstructed a visual
+                representation of the scanned space.
+              </p>
+            </div>
+          </div>
+          <div class="project-cover">
+            <div class="project-cover-placeholder">
+              <div>
+                <img
+                  src="images/2dx3-cover.jpg"
+                  alt="2DX3 project visual"
+                  class="lightbox-image"
+                />
+                <p>
+                  <!-- Good options: the MacAEV photo, ROS / rviz screenshot, mapping output,                localization figure, or autonomous driving setup. -->
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="project-layout" id="about">
+        <div class="container project-sections">
+          <div class="overview-grid" id="overview">
+            <div class="overview-card">
+              <h3>Course focus</h3>
+              <p>
+                Microprocessor systems, embedded interfacing, sensing, timing,
+                and system integration.
+              </p>
+            </div>
+            <div class="overview-card">
+              <h3>My role</h3>
+              <p>
+                Designed, programmed, tested, and documented the embedded system
+                and its scanning workflow.
+              </p>
+            </div>
+            <div class="overview-card">
+              <h3>Main challenge</h3>
+              <p>
+                Integrating sensor data collection, motor control, and
+                communication into one working system.
+              </p>
+            </div>
+            <div class="overview-card">
+              <h3>Final outcome</h3>
+              <p>
+                A functional low-cost indoor mapping prototype with UART data
+                transmission and MATLAB visualization.
+              </p>
+            </div>
+          </div>
+          <div class="case-card">
+            <span class="section-label">System Architecture</span>
+            <h2>Hardware block diagram</h2>
+            <div
+              class="arch-diagram"
+              aria-label="System architecture diagram showing MSP432 connected to ToF sensor, stepper motor, and MATLAB via UART"
+            >
+              <svg viewBox="0 0 500 280" class="arch-svg">
+                <defs>
+                  <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="rgba(138,108,255,0.1)" />
+                    <stop offset="50%" stop-color="rgba(138,108,255,0.5)" />
+                    <stop offset="100%" stop-color="rgba(138,108,255,0.1)" />
+                  </linearGradient>
+                  <filter id="glow">
+                    <feGaussianBlur stdDeviation="2" result="blur" />
+                    <feMerge>
+                      <feMergeNode in="blur" />
+                      <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                  </filter>
+                </defs>
+                <!-- Connection lines -->
+                <line
+                  x1="120"
+                  y1="110"
+                  x2="230"
+                  y2="110"
+                  stroke="rgba(138,108,255,0.25)"
+                  stroke-width="1.5"
+                />
+                <line
+                  x1="330"
+                  y1="110"
+                  x2="410"
+                  y2="110"
+                  stroke="rgba(255,135,178,0.25)"
+                  stroke-width="1.5"
+                />
+                <line
+                  x1="270"
+                  y1="170"
+                  x2="270"
+                  y2="230"
+                  stroke="rgba(110,190,255,0.25)"
+                  stroke-width="1.5"
+                />
+                <!-- Animated data dots on lines -->
+                <circle
+                  r="3"
+                  fill="rgba(138,108,255,0.8)"
+                  filter="url(#glow)"
+                  class="arch-dot arch-dot-1"
+                >
+                  <animate
+                    attributeName="cx"
+                    values="120;230"
+                    dur="2.5s"
+                    repeatCount="indefinite"
+                  />
+                  <animate
+                    attributeName="cy"
+                    values="110;110"
+                    dur="2.5s"
+                    repeatCount="indefinite"
+                  />
+                  <animate
+                    attributeName="opacity"
+                    values="0;1;0"
+                    dur="2.5s"
+                    repeatCount="indefinite"
+                  />
+                </circle>
+                <circle
+                  r="3"
+                  fill="rgba(255,135,178,0.8)"
+                  filter="url(#glow)"
+                  class="arch-dot arch-dot-2"
+                >
+                  <animate
+                    attributeName="cx"
+                    values="330;410"
+                    dur="2.8s"
+                    repeatCount="indefinite"
+                  />
+                  <animate
+                    attributeName="cy"
+                    values="110;110"
+                    dur="2.8s"
+                    repeatCount="indefinite"
+                  />
+                  <animate
+                    attributeName="opacity"
+                    values="0;1;0"
+                    dur="2.8s"
+                    repeatCount="indefinite"
+                  />
+                </circle>
+                <circle
+                  r="3"
+                  fill="rgba(110,190,255,0.8)"
+                  filter="url(#glow)"
+                  class="arch-dot arch-dot-3"
+                >
+                  <animate
+                    attributeName="cx"
+                    values="270;270"
+                    dur="3s"
+                    repeatCount="indefinite"
+                  />
+                  <animate
+                    attributeName="cy"
+                    values="170;230"
+                    dur="3s"
+                    repeatCount="indefinite"
+                  />
+                  <animate
+                    attributeName="opacity"
+                    values="0;1;0"
+                    dur="3s"
+                    repeatCount="indefinite"
+                  />
+                </circle>
+                <!-- VL53L1X ToF Sensor -->
+                <rect
+                  x="20"
+                  y="80"
+                  width="100"
+                  height="60"
+                  rx="10"
+                  fill="rgba(138,108,255,0.08)"
+                  stroke="rgba(138,108,255,0.3)"
+                  stroke-width="1.5"
+                />
+                <text
+                  x="70"
+                  y="105"
+                  text-anchor="middle"
+                  fill="rgba(138,108,255,0.8)"
+                  font-size="10"
+                  font-weight="700"
+                  font-family="Space Grotesk, sans-serif"
+                >
+                  VL53L1X
+                </text>
+                <text
+                  x="70"
+                  y="122"
+                  text-anchor="middle"
+                  fill="rgba(138,108,255,0.5)"
+                  font-size="8"
+                  font-family="Inter, sans-serif"
+                >
+                  ToF Sensor
+                </text>
+                <text
+                  x="70"
+                  y="133"
+                  text-anchor="middle"
+                  fill="rgba(138,108,255,0.35)"
+                  font-size="7"
+                  font-family="Inter, sans-serif"
+                >
+                  I2C
+                </text>
+                <!-- MSP432 -->
+                <rect
+                  x="230"
+                  y="80"
+                  width="80"
+                  height="60"
+                  rx="10"
+                  fill="rgba(255,135,178,0.08)"
+                  stroke="rgba(255,135,178,0.3)"
+                  stroke-width="1.5"
+                />
+                <text
+                  x="270"
+                  y="105"
+                  text-anchor="middle"
+                  fill="rgba(255,135,178,0.8)"
+                  font-size="10"
+                  font-weight="700"
+                  font-family="Space Grotesk, sans-serif"
+                >
+                  MSP432
+                </text>
+                <text
+                  x="270"
+                  y="122"
+                  text-anchor="middle"
+                  fill="rgba(255,135,178,0.5)"
+                  font-size="8"
+                  font-family="Inter, sans-serif"
+                >
+                  Microcontroller
+                </text>
+                <text
+                  x="270"
+                  y="133"
+                  text-anchor="middle"
+                  fill="rgba(255,135,178,0.35)"
+                  font-size="7"
+                  font-family="Inter, sans-serif"
+                >
+                  UART • I2C • PWM
+                </text>
+                <!-- Stepper Motor -->
+                <rect
+                  x="410"
+                  y="80"
+                  width="70"
+                  height="60"
+                  rx="10"
+                  fill="rgba(255,199,221,0.08)"
+                  stroke="rgba(255,199,221,0.3)"
+                  stroke-width="1.5"
+                />
+                <text
+                  x="445"
+                  y="105"
+                  text-anchor="middle"
+                  fill="rgba(255,199,221,0.8)"
+                  font-size="10"
+                  font-weight="700"
+                  font-family="Space Grotesk, sans-serif"
+                >
+                  Motor
+                </text>
+                <text
+                  x="445"
+                  y="122"
+                  text-anchor="middle"
+                  fill="rgba(255,199,221,0.5)"
+                  font-size="8"
+                  font-family="Inter, sans-serif"
+                >
+                  Stepper
+                </text>
+                <text
+                  x="445"
+                  y="133"
+                  text-anchor="middle"
+                  fill="rgba(255,199,221,0.35)"
+                  font-size="7"
+                  font-family="Inter, sans-serif"
+                >
+                  PWM
+                </text>
+                <!-- MATLAB -->
+                <rect
+                  x="220"
+                  y="230"
+                  width="100"
+                  height="40"
+                  rx="10"
+                  fill="rgba(110,190,255,0.08)"
+                  stroke="rgba(110,190,255,0.3)"
+                  stroke-width="1.5"
+                />
+                <text
+                  x="270"
+                  y="255"
+                  text-anchor="middle"
+                  fill="rgba(110,190,255,0.8)"
+                  font-size="10"
+                  font-weight="700"
+                  font-family="Space Grotesk, sans-serif"
+                >
+                  MATLAB
+                </text>
+                <text
+                  x="270"
+                  y="265"
+                  text-anchor="middle"
+                  fill="rgba(110,190,255,0.35)"
+                  font-size="7"
+                  font-family="Inter, sans-serif"
+                >
+                  Visualization
+                </text>
+              </svg>
+            </div>
+          </div>
+          <div class="case-card" id="journey">
+            <span class="section-label">Development Journey</span>
+            <h2>From Observe → Reason → Act → Integration</h2>
+            <div class="timeline">
+              <div class="timeline-item">
+                <h3>Observe</h3>
+                <p>
+                  I began with GPIO-based observation and FSM-driven input
+                  handling. This stage taught me how the microcontroller
+                  monitors button states, tracks sequential input, and
+                  structures observations before action.
+                </p>
+              </div>
+              <div class="timeline-item">
+                <h3>Reason</h3>
+                <p>
+                  I then worked with PWM, timing logic, stepper motor
+                  sequencing, and keypad decoding. This stage emphasized how
+                  embedded systems process input and apply rules to produce
+                  controlled output behavior.
+                </p>
+              </div>
+              <div class="timeline-item">
+                <h3>Act</h3>
+                <p>
+                  The next stage focused on interrupts, real-time
+                  responsiveness, software debounce, and ToF sensor interfacing
+                  over I2C. This made the system more event-driven and
+                  physically responsive.
+                </p>
+              </div>
+              <div class="timeline-item">
+                <h3>Final integration</h3>
+                <p>
+                  I combined these ideas into the indoor mapping module, where
+                  the sensor gathered distance data while the motor rotated
+                  through a scan path, and the system transmitted measurements
+                  for visualization in MATLAB.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="split-case-grid">
+            <div class="case-card">
+              <span class="section-label">System Details</span>
+              <h2>How the system works</h2>
+              <ul>
+                <li>VL53L1X Time-of-Flight sensor collects distance values.</li>
+                <li>Stepper motor rotates the sensor through a scan path.</li>
+                <li>
+                  MSP432E401Y controls timing, polling, and data packaging.
+                </li>
+                <li>UART sends scan values to a connected computer.</li>
+                <li>
+                  MATLAB parses the incoming packets and generates a 3D-style
+                  spatial visualization.
+                </li>
+              </ul>
+            </div>
+            <div class="case-card">
+              <span class="section-label">What I learned</span>
+              <h2>Technical skills developed</h2>
+              <ul>
+                <li>GPIO input monitoring and state tracking</li>
+                <li>Finite State Machine implementation</li>
+                <li>PWM timing and motor control</li>
+                <li>Interrupt handling and software debounce</li>
+                <li>I2C communication with ToF sensor</li>
+                <li>UART data transmission</li>
+                <li>MATLAB-side data parsing and visualization</li>
+              </ul>
+            </div>
+          </div>
+          <div class="case-card" id="gallery">
+            <span class="section-label">Visuals</span>
+            <h2>Project gallery</h2>
+            <div class="image-gallery">
+              <div class="gallery-card">
+                <img src="images/2dx3-system.png" alt="2DX3 system assembly" />
+                <!-- <div class="gallery-placeholder">Add assembled hardware photo here</div> -->
+                <div class="gallery-caption">
+                  <h3>System assembly</h3>
+                  <!-- <p>Use a photo showing the board, motor, sensor, and wiring together.</p> -->
+                </div>
+              </div>
+              <div class="gallery-card">
+                <img src="images/scan.png" alt="MATLAB visualization" />
+                <!-- <div class="gallery-placeholder">Add MATLAB output image here</div> -->
+                <div class="gallery-caption">
+                  <h3>Visualization output</h3>
+                  <!-- <p>Use a screenshot of your plotted scan or spatial reconstruction.</p> -->
+                </div>
+              </div>
+              <div class="gallery-card">
+                <img
+                  src="images/2dx3-diagram.png"
+                  alt="System architecture diagram"
+                />
+                <!-- <div class="gallery-placeholder">Add architecture/block diagram here</div> -->
+                <div class="gallery-caption">
+                  <h3>System architecture</h3>
+                  <!-- <p>Show the data flow from button input to sensor to UART to MATLAB.</p> -->
+                </div>
+              </div>
+              <div class="gallery-card">
+                <img
+                  src="images/2dx3-debug.png"
+                  alt="Debugging or serial output"
+                />
+                <!-- <div class="gallery-placeholder">Add serial/debug image here</div> -->
+                <div class="gallery-caption">
+                  <h3>Debugging & validation</h3>
+                  <!-- <p>Good options include UART output, sensor readings, or test validation screenshots.</p> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="split-case-grid">
+            <div class="case-card">
+              <span class="section-label">Challenges</span>
+              <h2>What made this difficult</h2>
+              <p>
+                The hardest part of the project was not any single component by
+                itself, but the integration of multiple subsystems. Accurate
+                distance collection, motor stepping, timing, transmission, and
+                visualization all had to work together in a reliable sequence.
+              </p>
+            </div>
+            <div class="case-card">
+              <span class="section-label">Solutions</span>
+              <h2>How I worked through it</h2>
+              <p>
+                I approached the project in layers: validate the input and
+                timing behavior first, then sensor communication, then motor
+                movement, then serial output, and finally end-to-end testing
+                with MATLAB. This incremental build process made debugging more
+                manageable.
+              </p>
+            </div>
+          </div>
+          <div class="case-card">
+            <span class="section-label">Tools Used</span>
+            <h2>Hardware & software stack</h2>
+            <div class="tools-cloud">
+              <span>MSP432E401Y</span> <span>VL53L1X</span>
+              <span>Stepper Motor</span> <span>I2C</span> <span>UART</span>
+              <span>MATLAB</span> <span>Embedded C</span> <span>Keil</span>
+            </div>
+          </div>
+          <div class="case-card" id="scansim">
+            <span class="section-label">Interactive Simulation</span>
+            <h2>ToF scanning simulator</h2>
+            <p>
+              This canvas simulates how the VL53L1X sensor and stepper motor work
+              together to map a space. Click to place or remove obstacle blocks,
+              select a room layout, then press <strong>Start Scan</strong> to see
+              the distance measurements and UART packets in action.
+            </p>
+            <div class="scan-sim-wrap">
+              <div class="scan-canvas-wrap">
+                <canvas id="scanCanvas"></canvas>
+              </div>
+              <div class="scan-sidebar">
+                <div class="scan-controls">
+                  <button class="scan-btn primary" id="scanStartBtn">Start Scan</button>
+                  <button class="scan-btn" id="scanResetBtn">Reset</button>
+                  <select class="scan-room-select" id="scanRoomSelect">
+                    <option value="empty">Empty room</option>
+                    <option value="simple">Simple obstacles</option>
+                    <option value="complex">Complex layout</option>
+                    <option value="wall">Wall maze</option>
+                  </select>
+                </div>
+                <div class="scan-readout">
+                  <div class="scan-readout-item">
+                    <div class="scan-readout-label">Angle</div>
+                    <div class="scan-readout-value" id="scanAngleDisplay">-</div>
+                  </div>
+                  <div class="scan-readout-item">
+                    <div class="scan-readout-label">Distance</div>
+                    <div class="scan-readout-value" id="scanDistDisplay">-</div>
+                  </div>
+                </div>
+                <div class="scan-uart-wrap">
+                  <div class="scan-uart-label">UART Data Stream</div>
+                  <div id="scanUartDisplay"></div>
+                </div>
+                <p class="scan-hint">
+                  Click the canvas to place/remove 30&times;30 obstacles. Hover
+                  to see a ghost preview. Press Start Scan to sweep &minus;90&deg;
+                  to +90&deg;.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="outcome-banner">
+            <h2>Outcome</h2>
+            <p>
+              This project best represents the kind of engineering work I enjoy
+              most: combining code, hardware, sensing, and visual interpretation
+              into one cohesive system. It shows my ability to think across
+              multiple layers of an embedded project, from signal acquisition to
+              final output.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+    <script src="2dx3-interactive.js"></script>
+  </body>
+</html>
